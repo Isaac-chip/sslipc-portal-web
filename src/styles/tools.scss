@@ -1,0 +1,40 @@
+// font size
+$base-font-size: 1px;   //单位
+$spacing-base-size: 1px;    //单位
+$directions: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+
+$spacing-types: (
+  m: margin,
+  p: padding,
+);
+@for $i from 1 through 800 {
+    .h-#{$i}px {
+      height: $i*$base-font-size;;
+    }
+  }
+  @for $i from 1 through 800 {
+    .w-#{$i}px {
+      width: $i*$base-font-size;;
+    }
+  }
+ 
+  @each $typeKey,
+  $type in $spacing-types {
+  
+  
+  
+    // .mt-1
+    @each $directionKey,
+    $position in $directions {
+      @for $i from 1 through 300 {
+        .#{$typeKey}#{$directionKey}-#{$i}px {
+          #{$type}-#{$position}: $i * $spacing-base-size;
+        }
+      }
+    }
+  }

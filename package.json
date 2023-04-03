@@ -1,5 +1,5 @@
 {
-  "name": "sslipc-portal-web",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
+    "flowbite": "^1.6.4",
+    "flowbite-react": "^0.4.2",
+    "lodash": "^4.17.21",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.60.0",
+    "swiper": "^9.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1"
   }
 }
