@@ -31,9 +31,9 @@ export default function Banner({}) {
         <SwiperSlide>
           <img className="object-cover" src="/banner/banner.png" alt="" />
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
+        {/* <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide> */}
       </Swiper>
       <div
         onMouseEnter={() => {

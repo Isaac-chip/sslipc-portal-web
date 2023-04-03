@@ -1,14 +1,11 @@
 
 
-
+import IntroTitle from "../common/IntroTitle"
 
 export default function IpServices (params) {
     return (
         <div className="container mx-auto mt-38px">
-            <div>
-                <p className="text-xxxl font-bold text-center">知识产权服务</p>
-                <p className="text-xs text-center">Intellectual Property Services</p>
-            </div>
+            <IntroTitle title="知识产权服务" desc="Intellectual Property Services"></IntroTitle>
             <div className="mt-40px flex justify-between md:flex-wrap">
                 <div className="w-140px">
                     <img className="h-140px w-140px" src="/ipServices/zhuanlicha.png" alt=""/>
