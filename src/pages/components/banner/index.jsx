@@ -9,9 +9,9 @@ import _ from "lodash";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import {fakeData} from '@/pages/constants.js'
+import { fakeData } from "@/pages/constants.js";
 
-export default function Banner() {
+export default function Banner({}) {
   const [isHovered, setIsHovered] = useState(false);
   const [Data, setData] = useState(fakeData);
 
@@ -36,17 +36,25 @@ export default function Banner() {
         <SwiperSlide>Slide 4</SwiperSlide>
       </Swiper>
       <div
+        onMouseEnter={() => {
+          setIsHovered(true);
+        }}
+        onMouseLeave={(e) => {
+          setIsHovered(false);
+        }}
         className={classNames(
-          "w-full absolute top-0 z-10  bg-black bg-opacity-50",
-          { isHovered: "pb-16px" }
+          "w-full absolute top-0 z-10  bg-black ",
+          { "bg-opacity-50": isHovered },
+          { "bg-opacity-10": !isHovered }
         )}
       >
         <div className="w-full">
           <div className="container h-40px mx-auto hidden md:block">
             <ul
-              onMouseEnter={() => {
+               onMouseEnter={() => {
                 setIsHovered(true);
               }}
+         
               className={classNames(
                 "cursor-pointer flex justify-around h-full items-center text-white text-md font-bold text-center"
               )}
@@ -64,8 +72,8 @@ export default function Banner() {
             </ul>
           </div>
           <div
-            onMouseLeave={()=>{
-                setIsHovered(false)
+            onMouseLeave={(e) => {
+              setIsHovered(false);
             }}
             className={classNames("flex container mx-auto pt-8px pb-20px", {
               hidden: !isHovered,
@@ -91,7 +99,6 @@ export default function Banner() {
                           setIsHovered(true);
                           console.log("123");
                         }}
-                   
                         key={item + index + "-" + subItem}
                         className="hover:text-yellow truncate pt-30px"
                       >

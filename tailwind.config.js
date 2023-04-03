@@ -23,8 +23,11 @@ module.exports = {
       xs:"12px",
       sm: "14px",
       md: "16px",
-      lg: "24px",
-      xl: "48px",
+      lg: "18px",
+      xl: "20px",
+      xxl:"22px",
+      xxxl:"24px"
+
     },
     minWidth:{
       '1/7':"14.285%"
