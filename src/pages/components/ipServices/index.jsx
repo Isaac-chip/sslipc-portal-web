@@ -6,7 +6,7 @@ export default function IpServices (params) {
     return (
         <div className="container mx-auto mt-38px">
             <IntroTitle title="知识产权服务" desc="Intellectual Property Services"></IntroTitle>
-            <div className="mt-40px flex justify-between md:flex-wrap">
+            <div className="mt-40px flex sm:justify-between flex-wrap justify-around">
                 <div className="w-140px">
                     <img className="h-140px w-140px" src="/ipServices/zhuanlicha.png" alt=""/>
                     <p className="text-xl font-medium text-center">专利查</p>

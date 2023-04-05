@@ -71,7 +71,7 @@ export default function SpecialInformation() {
         </div>
 
         <div
-          className="w-720px h-300px bg-blue-light box-border pt-20px pr-28px pl-27px"
+          className="xs:w-720px xs:h-300px bg-blue-light box-border pt-20px pr-28px pl-27px"
           style={{
             boxShadow: "2px 3px 12px 3px rgba(50,119,237,0.08)",
           }}
@@ -107,7 +107,7 @@ export default function SpecialInformation() {
                 return (
                   <li key={item+'-'+index} className="py-3 ">
                     <div className="flex items-center space-x-4">
-                      <div className="min-w-0 flex-1">
+                      <div className="w-2/3 xs:min-w-0 flex-1">
                         <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
                             {item.title}
                         </p>

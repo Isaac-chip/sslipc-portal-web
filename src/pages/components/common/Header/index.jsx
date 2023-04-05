@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Navbar, Dropdown, Button, ListGroup, Accordion } from "flowbite-react";
+import Head from "next/head";
 import classNames from "classnames";
 import LoginButton from "./login";
 
@@ -9,7 +10,15 @@ import { fakeData } from "@/pages/constants.js";
 
 export default function Index() {
   return (
-    <div className="container mx-auto">
+    <div>
+       <Head>
+        <title>东莞松山湖科学城知识产权</title>
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
+        />
+      </Head>
+      <div className="container mx-auto">
       <Navbar className="justify-around" fluid={true} rounded={true}>
         <Navbar.Brand href="https://flowbite.com/">
           <Image src="/LOGO.png" alt="me" width="294" height="49" />
@@ -49,5 +58,7 @@ export default function Index() {
         </Navbar.Collapse>
       </Navbar>
     </div>
+    </div>
+
   );
 }
