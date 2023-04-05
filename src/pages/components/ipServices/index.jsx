@@ -16,8 +16,8 @@ export default function IpServices (params) {
                     <p className="text-xl font-medium text-center">专利价值评估</p>
                 </div>
                 <div className="w-140px">
-                    <img className="h-140px w-140px" src="/ipServices/shujufenxi.png" alt=""/>
-                    <p className="text-xl font-medium text-center">重点产业数据分析</p>
+                    <img className="h-140px w-150px" src="/ipServices/shujufenxi.png" alt=""/>
+                    <p className="text-xl font-medium text-center w-160px">重点产业数据分析</p>
                 </div>
                 <div className="w-140px">
                     <img className="h-140px w-140px" src="/ipServices/chanquanjiaoyi.png" alt=""/>

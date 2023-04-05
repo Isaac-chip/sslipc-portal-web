@@ -1,7 +1,35 @@
+import classNames from "classnames";
 import { Card } from "flowbite-react";
+import { useState } from "react";
 import IntroTitle from "../common/IntroTitle";
 
 export default function SpecialInformation() {
+  const [active, setActive] = useState();
+  const fakeData = {
+    news: [
+      {
+        title: "南方中心助力全国首期河套合作区主题知识产权证券化产品发行中南方",
+        date: "2023-03-06",
+      },
+      {
+        title: "南方中心助力全国首期河套合作区主题知识产权证券化产品发行中南方",
+        date: "2023-03-06",
+      },
+      {
+        title: "南方中心助力全国首期河套合作区主题知识产权证券化产品发行中南方",
+        date: "2023-03-06",
+      },
+      {
+        title: "南方中心助力全国首期河套合作区主题知识产权证券化产品发行中南方",
+        date: "2023-03-06",
+      },
+      {
+        title: "南方中心助力全国首期河套合作区主题知识产权证券化产品发行中南方",
+        date: "2023-03-06",
+      },
+    ],
+    trends: [],
+  };
   return (
     <div>
       <div className="mt-73px mb-42px">
@@ -33,13 +61,69 @@ export default function SpecialInformation() {
                 2023.3
               </div>
             </div>
-            <div className="text-white ml-20px mr-20px truncate" style={{lineHeight:"50px"}}>
+            <div
+              className="text-white ml-20px mr-20px truncate"
+              style={{ lineHeight: "50px" }}
+            >
               外国驻穗领团参观考察南方中心点赞知识产权运外国驻穗领团参观考察南方中心点赞知识产权运
             </div>
           </div>
         </div>
 
-        <div className="w-720px h-300px bg-black">2</div>
+        <div
+          className="w-720px h-300px bg-blue-light box-border pt-20px pr-28px pl-27px"
+          style={{
+            boxShadow: "2px 3px 12px 3px rgba(50,119,237,0.08)",
+          }}
+        >
+          <div className={classNames("flex justify-between items-center mb-16px")}>
+            <div className={classNames("flex")}>
+              <div className={classNames("text-md text-blue-dark font-bold")}>
+                最新公告
+              </div>
+              <div
+                className={classNames(
+                  "ml-16px text-sm font-bold flex items-center"
+                )}
+              >
+                行业动态
+              </div>
+            </div>
+            <div className={classNames("flex items-center")}>
+              <div
+                className={classNames(
+                  "text-xs text-gray-light font-medium mr-6px"
+                )}
+              >
+                更多资讯
+              </div>
+              <img className="w-14px h-10px" src="/icon/rightIcon.png" alt="" />
+            </div>
+          </div>
+
+          <div className="flow-root">
+            <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+              {fakeData.news.map((item, index) => {
+                return (
+                  <li key={item+'-'+index} className="py-3 ">
+                    <div className="flex items-center space-x-4">
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                            {item.title}
+                        </p>
+                      </div>
+                      <div className="inline-flex items-center text-base font-semibold text-gray text-sm dark:text-white">
+                        {item.date}
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+
+            
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
