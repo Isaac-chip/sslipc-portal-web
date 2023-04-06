@@ -18,10 +18,10 @@ export default function PatentProject() {
           ></IntroTitle>
         </div>
 
-        <div className="flex mt-60px ">
+        <div className="sm:flex-row flex-col sm:flex mt-60px ">
           <div className="">
            
-            <div className="w-300px pb-40px relative">
+            <div className="w-300px pb-40px relative mx-auto sm:mx-0">
               <DescItem isShowMask={true}></DescItem>
               <DescItem></DescItem>
               <DescItem></DescItem>
@@ -30,7 +30,7 @@ export default function PatentProject() {
             </div>
             </div>
           </div>
-          <div className="w-5/6 flex flex-wrap justify-between">
+          <div className="w-5/6 flex flex-wrap sm:justify-between mx-auto sm:mx-0 justify-center">
             <Card></Card>
             <Card></Card>
             <Card></Card>
