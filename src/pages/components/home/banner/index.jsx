@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import Link from "next/link";
 import classNames from "classnames";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -31,9 +32,6 @@ export default function Banner({}) {
         <SwiperSlide>
           <img className="object-cover" src="/banner/banner.png" alt="" />
         </SwiperSlide>
-        {/* <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide> */}
       </Swiper>
       <div
         onMouseEnter={() => {
@@ -51,10 +49,9 @@ export default function Banner({}) {
         <div className="w-full">
           <div className="container h-40px mx-auto hidden md:block">
             <ul
-               onMouseEnter={() => {
+              onMouseEnter={() => {
                 setIsHovered(true);
               }}
-         
               className={classNames(
                 "cursor-pointer flex justify-around h-full items-center text-white text-md font-bold text-center"
               )}
@@ -95,14 +92,15 @@ export default function Banner({}) {
                   {Data[item].map((subItem) => {
                     return (
                       <li
+                        
                         onMouseEnter={() => {
                           setIsHovered(true);
                           console.log("123");
                         }}
-                        key={item + index + "-" + subItem}
+                        key={item + index + "-" + subItem.label}
                         className="hover:text-yellow truncate pt-30px"
                       >
-                        {subItem}
+                        <Link target={subItem?.target} href={subItem.router}>{subItem.label}</Link>
                       </li>
                     );
                   })}

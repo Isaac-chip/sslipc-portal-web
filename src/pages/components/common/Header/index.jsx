@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { Navbar, Dropdown, Button, ListGroup, Accordion } from "flowbite-react";
 import Head from "next/head";
@@ -39,13 +40,13 @@ export default function Index() {
                       <div className={classNames("w-full flex flex-wrap")}>
                         {fakeData[item].map((subItem,index) => {
                           return (
-                            <a
-                              key={subItem+'-'+index}
-                              href="https://flowbite.com/docs/getting-started/introduction/"
+                            <Link
+                              key={subItem.label+'-'+index}
+                              href={subItem.router}
                               className="text-blue-600 hover:underline dark:text-blue-500 pr-20px"
                             >
-                              {subItem}
-                            </a>
+                              {subItem.label}
+                            </Link>
                           );
                         })}
                       </div>
