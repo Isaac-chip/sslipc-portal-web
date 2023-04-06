@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { Card } from "flowbite-react";
 import { useState } from "react";
-import IntroTitle from "../common/IntroTitle";
+import IntroTitle from "../../common/IntroTitle";
 
 export default function SpecialInformation() {
   const [active, setActive] = useState();

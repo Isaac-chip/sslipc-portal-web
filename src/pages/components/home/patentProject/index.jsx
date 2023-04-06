@@ -1,4 +1,4 @@
-import IntroTitle from "../common/IntroTitle";
+import IntroTitle from "../../common/IntroTitle";
 import DescItem from "./desItem";
 import Card from "./card";
 

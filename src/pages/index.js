@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
 import Header from "./components/common/Header/index";
-import IpServices from "./components/ipServices";
-import SpecialInformation from "./components/specialInformation";
-import StrategicPartners from "./components/strategicPartners";
-import PatentProject from "./components/patentProject";
-const Banner = dynamic(() => import("./components/banner/index"), {
+import IpServices from "./components/home/ipServices";
+import SpecialInformation from "./components/home/specialInformation";
+import StrategicPartners from "./components/home/strategicPartners";
+import PatentProject from "./components/home/patentProject";
+const Banner = dynamic(() => import("./components/home/banner/index"), {
   ssr: false,
 });
 

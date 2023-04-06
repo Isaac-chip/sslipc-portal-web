@@ -1,6 +1,6 @@
 
 
-import IntroTitle from "../common/IntroTitle"
+import IntroTitle from "../../common/IntroTitle"
 
 export default function IpServices (params) {
     return (
