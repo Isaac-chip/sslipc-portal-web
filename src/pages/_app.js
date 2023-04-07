@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   //   import('@themesberg/flowbite')
   // }, [])
   return (
-    <div className='overflow-x-hidden pb-60'>
+    <div className='overflow-x-hidden pb-60 h-screen'>
       <Header></Header>
       <Component {...pageProps} />
       <Footer className=""></Footer>
