@@ -21,7 +21,7 @@ export default function Index() {
       </Head>
       <div className="container mx-auto">
       <Navbar className="justify-around" fluid={true} rounded={true}>
-        <Navbar.Brand href="https://flowbite.com/">
+        <Navbar.Brand href="/">
           <Image src="/LOGO.png" alt="me" width="294" height="49" />
         </Navbar.Brand>
         <Navbar.Toggle />

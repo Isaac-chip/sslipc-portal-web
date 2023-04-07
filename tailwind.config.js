@@ -9,10 +9,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        
         blue: {
           light: '#F6F9FF',
           DEFAULT: "#3078EC",
           dark: '#3178EC',
+          pagination:"#3C76F3"
+
         },
         yellow:{
           DEFAULT:"#EF8641"

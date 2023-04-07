@@ -1,3 +1,5 @@
+import {Pagination}  from "flowbite-react"; 
+
 export default function Footer() {
   return (
     <div
@@ -6,6 +8,7 @@ export default function Footer() {
         background: "#15244E",
       }}
     >
+     
       <div className="container mx-auto block sm:flex justify-between box-border pt-38px ">
         <div className="flex justify-center sm:justify-start">
           <div>
@@ -26,7 +29,6 @@ export default function Footer() {
         </div>
         <div className="flex text-white justify-center sm:justify-start mt-2 sm:mt-0">
           <div className="w-87px h-87px bg-white p-1">
-            
             <img className="w-full h-full bg-black" src="" alt="" srcset="" />
           </div>
           <div className="pl-20px">
