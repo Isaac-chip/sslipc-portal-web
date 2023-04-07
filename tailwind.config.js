@@ -30,12 +30,15 @@ module.exports = {
       lg: "18px",
       xl: "20px",
       xxl:"22px",
-      xxxl:"24px"
+      xxxl:"24px",
+      30:"30px"
+
 
     },
     minWidth:{
       '1/7':"14.285%"
-    }
+    },
+   
   },
 
   plugins: [require("flowbite/plugin")],

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div
-      className="w-screen xs:h-212px"
+      className="w-screen h-70 xs:h-50 fixed bottom-0"
       style={{
         background: "#15244E",
       }}
