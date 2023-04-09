@@ -2,11 +2,56 @@ import Banner from "./banner";
 import Summary from "./summary";
 import PolicyCard from "./policyCard";
 export default function Financial() {
+  const data = [
+    {
+      sortNum: 1,
+      title: "业务申请",
+      content:
+        "通过松山湖IP中心官方网站、微信公众号、银行等途径提交融资业务申请。",
+    },
+    {
+      sortNum: 2,
+      title: "需求调查",
+      content:
+        "松山湖IP中心委派项目经理预立项，企业填写《中小企业知识产权质押融资需求调查表》。",
+    },
+    {
+      sortNum: 3,
+      title: "银行沟通",
+      content:
+        "松山湖IP中心正式立项并进行首次企业实地尽调，与银行渠道沟通企业资质情况，形成融资方案。",
+    },
+    {
+      sortNum: 4,
+      title: "授信尽调",
+      content:
+        "合作银行在中心项目组的陪同下对企业进行实地走访，完成贷前尽调程序，出具尽调报告。        ",
+    },
+    {
+      sortNum: 5,
+      title: "价值评估",
+      content:
+        "松山湖IP中心整合资源，协调内外部专家团队为企业拟质押专利出具《知识产权价值评估报告书》。",
+    },
+    {
+      sortNum: 6,
+      title: "信审&协议签署      ",
+      content:
+        "银行根据审批权限范围提交尽调材料，履行信审程序；银行、企业、松山湖IP中心完成各类协议的签署。        ",
+    },
+    {
+      sortNum: 7,
+      title: "质押登记",
+      content:
+        "松山湖IP中心协助银企双方向国家知识产权局外派代办机构提交知识产权质押登记申请，办理质押手续。        ",
+    },
+  ];
   return (
     <div>
       <Banner></Banner>
       <div className="container mx-auto">
         <Summary
+          rootClass={"mt-30px"}
           bgImgClass="h-26px"
           titleImgClass="w-88px h-60px"
           bgImg="/financial/sdts.png"
@@ -69,6 +114,7 @@ export default function Financial() {
           </div>
         </Summary>
         <Summary
+          rootClass={"mt-40px"}
           bgImgClass="h-26px"
           titleImgClass="w-88px h-60px"
           bgImg="/financial/zcbt.png"
@@ -99,12 +145,11 @@ export default function Financial() {
               </PolicyCard>
               <PolicyCard icon={"/financial/money.png"}>
                 <p>
-                贷融资成本补贴
+                  贷融资成本补贴
                   <span className="text-xxxl font-medium">50%</span>
-           
                 </p>
                 <p className="">
-                最高资助
+                  最高资助
                   <span className="text-xxxl font-medium">100万</span>元；
                 </p>
               </PolicyCard>
@@ -112,6 +157,105 @@ export default function Financial() {
           </div>
         </Summary>
       </div>
+      <Summary
+        rootClass="container mx-auto mt-20px"
+        bgImgClass="h-26px"
+        titleImgClass="w-88px h-60px"
+        bgImg="/financial/cpms.png"
+        titleImg="/financial/chanpin.png"
+      >
+        <div className="mt-33px w-full  bg-blue-light py-10">
+          <img
+            className="mx-auto"
+            src="/financial/liucheng(1).png"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </Summary>
+      <Summary
+        rootClass={"mt-40px container mx-auto"}
+        bgImgClass="h-26px"
+        titleImgClass="w-88px h-60px"
+        bgImg="/financial/LCJS.png"
+        titleImg="/financial/liucheng.png"
+      >
+        <div className="mt-33px mx-auto container">
+          <div className="flex flex-1 flex-wrap justify-between flex-col h-400px">
+            {data.map((item) => {
+              return (
+                <div key={item}>
+                  <div className="flex w-2/5 box-border mb-30px">
+                    <div
+                      className="text-28 text-white font-bold flex justify-center items-center w-67px h-67px  flex-shrink-0"
+                      style={{
+                        background:
+                          "linear-gradient(315deg, #335BE7 0%, #5693FC 100%)",
+                        boxShadow: "2px 4px 4px 0px rgba(83,142,251,0.4)",
+                        borderRadius: " 5px 5px 5px 5px",
+                      }}
+                    >
+                      0{item.sortNum}
+                    </div>
+                    <div className="pl-2">
+                      <div className="text-lg font-bold">{item.title}</div>
+                      <div className="text-md font-medium mt-1">
+                        {item.content}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </Summary>
+      <Summary
+        rootClass={"mt-40px container mx-auto"}
+        bgImgClass="h-26px"
+        titleImgClass="w-88px h-60px"
+        bgImg="/financial/FWJG.png"
+        titleImg="/financial/fuwu.png"
+      >
+        <div className="mt-33px mx-auto container">
+          <div className="flex flex-1 flex-wrap">
+            <div
+              className=""
+              style={{
+                width: "200px",
+                height: "127px",
+                boxShadow: "0px 0px 4px 4px rgba(195,195,195,0.15)",
+                borderRadius: " 0px 0px 0px 0px",
+                opacity: 1,
+              }}
+            >
+              1
+            </div>
+            <div
+              className="ml-46px"
+              style={{
+                width: "280px",
+                height: "127px",
+                boxShadow: "0px 0px 4px 4px rgba(195,195,195,0.15)",
+                borderRadius: "0px 0px 0px 0px",
+                opacity: 1,
+              }}
+            ></div>
+          </div>
+        </div>
+      </Summary>
+      {/* 融资申请 */}
+      <Summary
+        rootClass={"mt-40px container mx-auto"}
+        bgImgClass="h-26px"
+        titleImgClass="w-88px h-60px"
+        bgImg="/financial/RZSQ.png"
+        titleImg="/financial/rongzi.png"
+      >
+       <div className="container mx-auto">
+       <div className="text-xxxl mt-27px">联系我们：0769-26990216</div>
+       </div>
+      </Summary>
     </div>
   );
 }

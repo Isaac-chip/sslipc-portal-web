@@ -6,10 +6,11 @@ export default function Summary({
   bgImg,
   titleImgClass,
   bgImgClass,
+  rootClass
 }) {
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className={classNames("flex justify-between items-center",rootClass)}>
         <img
           className={classNames(titleImgClass)}
           src={titleImg}
