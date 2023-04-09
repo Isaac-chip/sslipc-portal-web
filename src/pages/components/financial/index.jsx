@@ -181,7 +181,7 @@ export default function Financial() {
         titleImg="/financial/liucheng.png"
       >
         <div className="mt-33px mx-auto container">
-          <div className="flex flex-1 flex-wrap justify-between flex-col sm:h-400px ">
+          <div className="flex flex-1 flex-wrap justify-between">
             {data.map((item) => {
               return (
                 <div key={item}>
@@ -197,7 +197,7 @@ export default function Financial() {
                     >
                       0{item.sortNum}
                     </div>
-                    <div className="pl-2">
+                    <div className="pl-2 max-w-xl">
                       <div className="text-lg font-bold">{item.title}</div>
                       <div className="text-md font-medium mt-1">
                         {item.content}
