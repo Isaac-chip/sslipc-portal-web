@@ -3,7 +3,7 @@ import {Pagination}  from "flowbite-react";
 export default function Footer() {
   return (
     <div
-      className="w-screen h-70 xs:h-50 fixed bottom-0"
+      className="w-screen h-70 xs:h-50"
       style={{
         background: "#15244E",
       }}

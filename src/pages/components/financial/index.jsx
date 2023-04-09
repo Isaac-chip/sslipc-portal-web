@@ -181,11 +181,11 @@ export default function Financial() {
         titleImg="/financial/liucheng.png"
       >
         <div className="mt-33px mx-auto container">
-          <div className="flex flex-1 flex-wrap justify-between flex-col h-400px">
+          <div className="flex flex-1 flex-wrap justify-between flex-col sm:h-400px ">
             {data.map((item) => {
               return (
                 <div key={item}>
-                  <div className="flex w-2/5 box-border mb-30px">
+                  <div className="flex  box-border mb-30px">
                     <div
                       className="text-28 text-white font-bold flex justify-center items-center w-67px h-67px  flex-shrink-0"
                       style={{
@@ -220,7 +220,7 @@ export default function Financial() {
         <div className="mt-33px mx-auto container">
           <div className="flex flex-1 flex-wrap">
             <div
-              className=""
+              className="mb-4"
               style={{
                 width: "200px",
                 height: "127px",
@@ -232,7 +232,7 @@ export default function Financial() {
               1
             </div>
             <div
-              className="ml-46px"
+              className="ml-0 sm:ml-28 "
               style={{
                 width: "280px",
                 height: "127px",
@@ -253,7 +253,7 @@ export default function Financial() {
         titleImg="/financial/rongzi.png"
       >
        <div className="container mx-auto">
-       <div className="text-xxxl mt-27px">联系我们：0769-26990216</div>
+       <div className="text-xxxl pb-141px pt-27px">联系我们：0769-26990216</div>
        </div>
       </Summary>
     </div>
