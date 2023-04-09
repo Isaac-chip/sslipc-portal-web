@@ -2,7 +2,7 @@ import Financial from "./components/Financial"
 
 export default function financialPage(){
     return (
-        <div>
+        <div style={{background:"#FFFFFF"}}>
            <Financial></Financial> 
         </div>
     )

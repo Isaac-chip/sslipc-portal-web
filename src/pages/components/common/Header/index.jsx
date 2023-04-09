@@ -11,7 +11,7 @@ import { fakeData } from "@/pages/constants.js";
 
 export default function Index() {
   return (
-    <div>
+    <div style={{background:"#FFFFFF"}}>
        <Head>
         <title>东莞松山湖科学城知识产权</title>
         <meta

@@ -30,7 +30,7 @@ export default function Banner({}) {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-          <img className="object-cover" src="/banner/banner.png" alt="" />
+          <img className="object-cover w-full" src="/banner/banner.png" alt="" />
         </SwiperSlide>
       </Swiper>
       <div

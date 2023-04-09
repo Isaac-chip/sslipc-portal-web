@@ -50,6 +50,35 @@ export default function PublicService() {
             <div className="mb-20px">
               <Card></Card>
             </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div>
+            <div className="mb-20px">
+              <Card></Card>
+            </div> <div className="mb-20px">
+              <Card></Card>
+            </div>
           </Tabs.Item>
           <Tabs.Item active={true} title="行业资讯">
             Dashboard content
