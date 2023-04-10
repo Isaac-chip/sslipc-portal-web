@@ -45,7 +45,7 @@ export default function SideBar({sideBar}) {
               }}
             >
               <div
-                className={classNames("text-xl   hover:text-gray-200", {
+                className={classNames("text-xl w-148px   hover:text-gray-200", {
                   "text-white":  activity.menuActivity=== index,
                 })}
               >
