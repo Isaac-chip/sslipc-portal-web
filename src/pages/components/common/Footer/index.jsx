@@ -8,7 +8,7 @@ export default function Footer() {
         background: "#15244E",
       }}
     >
-      <div className="container mx-auto block sm:flex justify-between box-border pt-38px ">
+      <div className="container mx-auto block sm:flex justify-between box-border pt-38px pb-20px">
 
           <div className="flex justify-center sm:justify-start">
             <div>

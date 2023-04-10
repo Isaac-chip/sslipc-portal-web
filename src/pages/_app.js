@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   //   import('@themesberg/flowbite')
   // }, [])
   return (
-    <div className="flex flex-col justify-between  min-h-screen" style={{background:"#F9F9F9"}}>
+    <div className="flex flex-col justify-between  min-h-screen overflow-x-hidden3" style={{background:"#F9F9F9"}}>
       <div>
         <Header></Header>
 
