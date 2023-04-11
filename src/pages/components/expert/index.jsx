@@ -1,9 +1,10 @@
 import Image from "next/image";
-
+import { useRouter } from 'next/router'
 import Button from "./button";
 import ExpertCard from "./ExpertCard";
 export default function Expert() {
   const count = 9;
+  const router = useRouter()
   return (
     <div className="container mx-auto">
       <Image
@@ -22,7 +23,7 @@ export default function Expert() {
       <div className="mt-40px mb-131px flex flex-wrap sm:justify-between justify-center flex-1">
         {new Array(count).fill("").map((item) => {
           return (
-            <div className="mb-40px">
+            <div className="mb-40px" onClick={()=>router.push('/expertDetail?id=123')}>
               <ExpertCard></ExpertCard>
             </div>
           );
