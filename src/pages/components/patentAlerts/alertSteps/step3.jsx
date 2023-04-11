@@ -1,4 +1,4 @@
-import StepRootWrap from "./stepRootWrap";
+import StepRootWrap from "../../common/Steps/stepRootWrap";
 export default function Step3() {
   return (
     <StepRootWrap step={3}>

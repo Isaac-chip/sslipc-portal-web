@@ -2,7 +2,7 @@ import Steps from "../../common/Steps";
 import CustomInput from "../../common/Input";
 import Checkbox from "./checkbox";
 import SelectPlus from "../../common/Select";
-import StepRootWrap from "./stepRootWrap";
+import StepRootWrap from "../../common/Steps/stepRootWrap";
 export default function Step2() {
   const checkBoxRowData = {
     监控事件: [

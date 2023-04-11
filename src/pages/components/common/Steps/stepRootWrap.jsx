@@ -1,4 +1,4 @@
-import Steps from "../../common/Steps"
+import Steps from "./"
 export default function StepRootWrap({step=1,children}){
     return (
         <div className="mt-4">

@@ -3,8 +3,8 @@ import SelectPlus from "../../common/Select";
 
 import Steps from "../../common/Steps";
 import CustomInput from "../../common/Input";
-import StepRootWrap from "./stepRootWrap";
 
+import StepRootWrap from "../../common/Steps/stepRootWrap";
 export default function Step1() {
   const [count, setCount] = useState(1);
 
