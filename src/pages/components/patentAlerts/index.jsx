@@ -1,5 +1,5 @@
 import SideBar from "../common/SideBar";
-import Steps from "../common/Steps";
+import AlertSteps from "./alertSteps";
 
 export default function PatentAlerts() {
   const sideBarList = [
@@ -23,7 +23,8 @@ export default function PatentAlerts() {
     <div className="flex">
       <SideBar sideBar={sideBarList}></SideBar>
       <div className="ml-4 w-full bg-white">
-        <Steps></Steps> 
+        {/* <Steps></Steps>  */}
+        <AlertSteps></AlertSteps>
       </div>
     </div>
   );

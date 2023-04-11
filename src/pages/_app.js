@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useRouter } from 'next/router'
 import "@/styles/globals.css";
 import "@/styles/tools.scss";
-import { divide } from "lodash";
 import Header from "./components/common/Header/index";
 import Footer from "./components/common/Footer";
 
