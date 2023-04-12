@@ -1,6 +1,6 @@
 import StepRootWrap from "../../common/Steps/stepRootWrap";
 import CustomInput from "../../common/Input";
-import TextArea from "../../common/TexTArea";
+
 export default function Step2() {
   return (
     <StepRootWrap step={2}>
