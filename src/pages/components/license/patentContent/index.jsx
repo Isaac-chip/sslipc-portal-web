@@ -1,6 +1,7 @@
 
 import Options from "../../common/ItemDivider";
 import Label from "../../common/ItemDivider/label";
+import DateRangePicker from "../../common/RangePicker";
 export default function PatentContent() {
   const arr = [
     {
@@ -62,9 +63,9 @@ export default function PatentContent() {
               { id: 3, title: "近一年" },
             ]}
           ></Options>
-          <div className="ml-40">
+          <div className="ml-40 flex items-center">
             <Label labelText={"自定义："}></Label>
-           
+            <DateRangePicker></DateRangePicker>
 
           </div>
         </div>
