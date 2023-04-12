@@ -10,8 +10,8 @@ export default function Options({ items,labelText }) {
       </div>
       <div className="flex items-center">
         <div
-          className={classNames(`grid   cursor-pointer border`,'grid-cols-'+gridColsNum)}
-          style={{ background: "#F2F6FA", borderColor: "#E7EFF8" }}
+          className={classNames(`grid cursor-pointer border`)}
+          style={{ background: "#F2F6FA", borderColor: "#E7EFF8",gridTemplateColumns: `repeat(${gridColsNum}, minmax(0, 1fr))` }}
         >
           {items.map((item,index) => {
             return (
