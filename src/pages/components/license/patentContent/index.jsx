@@ -1,7 +1,7 @@
-
 import Options from "../../common/ItemDivider";
 import Label from "../../common/ItemDivider/label";
 import DateRangePicker from "../../common/RangePicker";
+import SortButton from "../../common/SortButton";
 export default function PatentContent() {
   const arr = [
     {
@@ -66,8 +66,11 @@ export default function PatentContent() {
           <div className="ml-40 flex items-center">
             <Label labelText={"自定义："}></Label>
             <DateRangePicker></DateRangePicker>
-
           </div>
+        </div>
+        <div className="flex w-300px justify-between mt-6 ml-20">
+          <SortButton text={"发布时间排序"}></SortButton>
+          <SortButton text={"价格排序"}></SortButton>
         </div>
       </div>
     </div>
