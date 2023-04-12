@@ -77,7 +77,7 @@ export default function PatentContent() {
           {
             new Array(10).fill('').map((item)=>{
                 return(
-                    <Card></Card>
+                    <Card className={'mb-6'}></Card>
                 )
             })
           }

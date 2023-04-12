@@ -1,6 +1,7 @@
-export default function Card() {
+import classNames from "classnames";
+export default function Card({className}) {
   return (
-    <div className="flex pb-29px border-b border-gray-200">
+    <div className={classNames("flex pb-29px border-b border-gray-200",className)}>
       <img
         className="w-248px h-160px"
         src="https://th.bing.com/th/id/OIP.22tPt9bi1FRyjOYQI8irPQHaD4?w=314&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
