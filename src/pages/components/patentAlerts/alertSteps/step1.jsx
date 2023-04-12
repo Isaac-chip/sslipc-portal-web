@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import SelectPlus from "../../common/Select";
 
-import Steps from "../../common/Steps";
+
 import CustomInput from "../../common/Input";
 
 import StepRootWrap from "../../common/Steps/stepRootWrap";

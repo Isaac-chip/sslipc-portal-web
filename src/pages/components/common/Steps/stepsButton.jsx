@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 export default function StepsButton({hasPreBtn=true,next}) {
   return (
-    <div className="flex justify-between">
+    <div className="flex mx-auto max-w-xl">
       <div className={classNames("cursor-pointer w-200px h-48px rounded border-2 border-blue-700 text-lg text-blue-700 font-bold flex justify-center items-center bg-white",{"hidden":!hasPreBtn})}>
         上一步
       </div>
