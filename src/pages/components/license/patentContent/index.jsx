@@ -2,6 +2,7 @@ import Options from "../../common/ItemDivider";
 import Label from "../../common/ItemDivider/label";
 import DateRangePicker from "../../common/RangePicker";
 import SortButton from "../../common/SortButton";
+import Card from "./card";
 export default function PatentContent() {
   const arr = [
     {
@@ -71,6 +72,15 @@ export default function PatentContent() {
         <div className="flex w-300px justify-between mt-6 ml-20">
           <SortButton text={"发布时间排序"}></SortButton>
           <SortButton text={"价格排序"}></SortButton>
+        </div>
+        <div className="mt-10">
+          {
+            new Array(10).fill('').map((item)=>{
+                return(
+                    <Card></Card>
+                )
+            })
+          }
         </div>
       </div>
     </div>
