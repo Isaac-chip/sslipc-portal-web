@@ -3,6 +3,7 @@ import Label from "../../common/ItemDivider/label";
 import DateRangePicker from "../../common/RangePicker";
 import SortButton from "../../common/SortButton";
 import Card from "./card";
+import PaginationPlus from "../../common/Pagination";
 export default function PatentContent() {
   const arr = [
     {
@@ -74,14 +75,12 @@ export default function PatentContent() {
           <SortButton text={"价格排序"}></SortButton>
         </div>
         <div className="mt-10">
-          {
-            new Array(10).fill('').map((item)=>{
-                return(
-                    <Card className={'mb-6'}></Card>
-                )
-            })
-          }
+          {new Array(10).fill("").map((item) => {
+            return <Card className={"mb-6"}></Card>;
+          })}
         </div>
+
+        <PaginationPlus></PaginationPlus>
       </div>
     </div>
   );
