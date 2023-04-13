@@ -1,7 +1,10 @@
+
+
 import TabsPlus from "../common/TabsPlus";
 import PatentContent from "./patentContent";
 import TradeMark from "./tradeMark";
 import Copyright from "./copyright";
+
 export default function License() {
   const tabs = [
     {

@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Options from "../../common/ItemDivider";
 import Label from "../../common/ItemDivider/label";
 import DateRangePicker from "../../common/RangePicker";
@@ -45,7 +46,7 @@ export default function PatentContent() {
       ],
     },
   ];
-
+  const router = useRouter()
   return (
     <div className="flex">
       <div className="flex-grow">
@@ -76,7 +77,7 @@ export default function PatentContent() {
         </div>
         <div className="mt-10">
           {new Array(10).fill("").map((item) => {
-            return <Card className={"mb-6"}></Card>;
+            return <Card onClick={()=>router.push('/copyRightDetail?id=123')} className={"mb-6"}></Card>;
           })}
         </div>
 
