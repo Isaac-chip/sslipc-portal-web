@@ -1,7 +1,10 @@
-import Card from "./card";
+import { useRouter } from "next/router";
+
+import Card from "../../common/TradeMarkCard";
 import PaginationPlus from "../../common/Pagination";
 import Options from "../../common/ItemDivider";
 import SortButton from "../../common/SortButton";
+
 export default function TradeMark() {
   const arr = [
     {
@@ -87,6 +90,7 @@ export default function TradeMark() {
         ],
       },
   ];
+  const router = useRouter()
   return (
     <>
       <div>
