@@ -1,5 +1,6 @@
 import TabsPlus from "../common/TabsPlus";
 import PatentContent from "./patentContent";
+import TradeMark from "./tradeMark";
 export default function License() {
   const tabs = [
     {
@@ -11,9 +12,7 @@ export default function License() {
     {
       label: "商标",
       content: (
-        <div className="relative">
-          <div className="grid grid-cols-4 gap-4"></div>
-        </div>
+        <TradeMark></TradeMark>
       ),
     },
     {
