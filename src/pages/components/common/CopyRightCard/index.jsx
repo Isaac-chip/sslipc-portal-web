@@ -1,6 +1,7 @@
-export default function CopyRightCard() {
+export default function CopyRightCard({onClick}) {
     return (
       <div
+        onClick={onClick}
         className="w-240px h-320px box-border px-2 pt-2"
         style={{
           background: "#F8FBFF",
