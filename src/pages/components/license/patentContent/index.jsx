@@ -48,7 +48,7 @@ export default function PatentContent() {
 
   return (
     <div className="flex">
-      <div>
+      <div className="flex-grow">
         {arr.map((item) => {
           return (
             <div className="mt-4">
