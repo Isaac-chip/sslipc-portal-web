@@ -1,7 +1,7 @@
 import Card from "./card";
 import PaginationPlus from "../../common/Pagination";
 import Options from "../../common/ItemDivider";
-import Label from "../../common/ItemDivider/label";
+import SortButton from "../../common/SortButton";
 export default function TradeMark() {
   const arr = [
     {
@@ -53,31 +53,39 @@ export default function TradeMark() {
         { id: 6, title: "45类 社会服务" },
       ],
     },
-    {
-      label: "专利类型：",
-      options: [
-        { id: 1, title: "发明专利" },
-        { id: 2, title: "实用新型" },
-        { id: 3, title: "外观设计" },
-      ],
-    },
-    {
-      label: "成熟度：",
-      options: [
-        { id: 1, title: "概念方案" },
-        { id: 2, title: "试制阶段" },
-        { id: 3, title: "成熟应用" },
-      ],
-    },
+    
     {
       label: "交易价格：",
       options: [
         { id: 1, title: "免费" },
-        { id: 2, title: "1万以下" },
-        { id: 3, title: "1-20万" },
-        { id: 4, title: "20万以上" },
+        { id: 2, title: "5000以下" },
+        { id: 3, title: "5000 - 1万" },
+        { id: 4, title: "1 - 2万" },
+        { id: 4, title: "2 - 5万" },
+        { id: 4, title: "5万以上" },
       ],
     },
+    {
+        label: "商标组合：",
+        options: [
+          { id: 1, title: "不限" },
+          { id: 2, title: "中文" },
+          { id: 3, title: "英文(拼音)" },
+          { id: 4, title: "中文+英文(拼音)" },
+          { id: 4, title: "图形" },
+          { id: 4, title: "组合" },
+          { id: 4, title: "数字" },
+        ],
+      },
+      {
+        label: "发布时间：",
+        options: [
+          { id: 1, title: "近一个月" },
+          { id: 2, title: "近三个月" },
+          { id: 3, title: "近一年" },
+         
+        ],
+      },
   ];
   return (
     <>
@@ -90,6 +98,10 @@ export default function TradeMark() {
           );
         })}
       </div>
+      <div className="flex w-300px justify-between mt-6 ml-20 mb-10">
+          <SortButton text={"发布时间排序"}></SortButton>
+          <SortButton text={"价格排序"}></SortButton>
+        </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {new Array(10).fill("").map((item) => {
           return <Card></Card>;
