@@ -1,4 +1,4 @@
-import Card from "./card";
+import CopyRightCard from "../../common/CopyRightCard";
 import Options from "../../common/ItemDivider";
 import SortButton from "../../common/SortButton";
 import PaginationPlus from "../../common/Pagination";
@@ -41,7 +41,7 @@ export default function Copyright() {
         <SortButton text={"价格排序"}></SortButton>
       </div>
 
-      <Card></Card>
+      <CopyRightCard></CopyRightCard>
      <div className="mt-70px mb-95px">
         <PaginationPlus></PaginationPlus>
      </div>
