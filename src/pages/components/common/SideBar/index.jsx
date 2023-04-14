@@ -1,86 +1,110 @@
-
-import _ from "lodash"
-import { useEffect, useState } from "react";
+import _ from "lodash";
+import { useEffect, useState, useCallback,useMemo } from "react";
 import classNames from "classnames";
-export default function SideBar({sideBar}) {
-  const [activity, setActivity] = useState({
-    menuActivity:0,
-    subMenuActivity:0,
-    activity:[0,0]
-  });
 
-  const [sideBarData, setSideBarData] = useState(sideBar);
+export default function SideBar({ sideBar, setComponent }) {
+  const [{ menuActivity, subMenuActivity, activity }, setActivity] = useState(
+    {
+      menuActivity: 0,
+      subMenuActivity: 0,
+      activity: [0, 0],
+    }
+  );
+  
+  const handleMenu = useCallback(
+    (index) => {
+      setSideBarData((prev) => {
+        const data = _.cloneDeep(prev);
+        data[index].open = !data[index].open;
+        return data;
+      });
+      setActivity((prev) => {
+        const data = { ...prev, menuActivity: index };
+        if (sideBar[index]?.children?.length === 0) {
+          data.activity = [index];
+        }
+        return data;
+      });
+    },
+    [sideBar]
+  );
 
+  const [sideBarData,setSideBarData] = useState(sideBar);
+  useEffect(()=>{
+    setComponent(sideBarData[0]?.component);
+  },[])
 
-  const handleMenu = (index)=>{
-    const data = _.cloneDeep(sideBarData)
-    data[index].open=!data[index].open
-    setSideBarData(data) 
-  }
   return (
-    <div>
-      {/* 一级菜单 */}
-      {sideBarData.map((item, index) => {
-        return (
-          <div className="cursor-pointer">
+    <div className="flex">
+      <div>
+        {/* 一级菜单 */}
+        {sideBarData.map(({ label, children = [], open, component }, index) => (
+          <div key={index} className="cursor-pointer">
             <div
               onClick={() => {
-                handleMenu(index)
-               const data = _.cloneDeep(activity)
-               data.menuActivity=index
-               if(sideBarData[index].children.length==0){
-                    data.activity=[index]
-               }
-         
-               setActivity(data)
+                handleMenu(index);
+                if(sideBarData[index]?.component){
+                  setComponent(sideBarData[index]?.component);
+                }
+
               }}
               className={classNames(
-                "h-72px w-210px flex justify-around items-center bg-white"
+                "h-72px w-210px flex justify-around items-center bg-white",
+                {
+                  "text-white": menuActivity === index,
+                }
               )}
               style={{
                 background:
-                  activity.menuActivity === index
+                  menuActivity === index
                     ? "url(/rightFlow/xuanzhong.png)"
                     : "",
               }}
             >
-              <div
-                className={classNames("text-xl w-148px   hover:text-gray-200", {
-                  "text-white":  activity.menuActivity=== index,
-                })}
-              >
-                {item.label}
+              <div className="text-xl w-148px hover:text-gray-200">
+                {label}
               </div>
-              <img
-                className={classNames({"hidden":sideBar[index].children.length==0})}
-                src={
-                    activity.menuActivity === index ? `/icon/shangla.png` : `/icon/down.png`
-                }
-                alt=""
-                srcset=""
-              />
+              {children?.length > 0 && (
+                <img
+                  className={classNames({
+                    hidden: !open,
+                  })}
+                  src={
+                    menuActivity === index
+                      ? `/icon/shangla.png`
+                      : `/icon/down.png`
+                  }
+                  alt=""
+                  srcset=""
+                />
+              )}
             </div>
-            {item?.children.map((item, subIndex) => {
-              return (
-                <div
-                  onClick={()=>{
-                    const data = _.cloneDeep(activity)
-                    data.menuActivity=index
-                    data.subMenuActivity=subIndex
-                    data.activity=[index,subIndex]
-                    setActivity(data)
-                  }}
-                  className={classNames(
-                    "h-40px bg-white w-210px flex justify-center items-center text-md hover:text-blue",{"hidden":!sideBarData[index].open},{"text-blue":activity.activity[0]==index && activity.activity[1]==subIndex}
-                  )}
-                >
-                  {item.label}
-                </div>
-              );
-            })}
+            {children?.map(({ label }, subIndex) => (
+              <div
+                key={subIndex}
+                onClick={() => {
+                  setActivity({
+                    menuActivity: index,
+                    subMenuActivity: subIndex,
+                    activity: [index, subIndex],
+                  });
+                  setComponent(component);
+                }}
+                className={classNames(
+                  "h-40px bg-white w-210px flex justify-center items-center text-md hover:text-blue",
+                  { hidden: !open },
+                  {
+                    "text-blue":
+                      activity[0] === index && activity[1] === subIndex,
+                  }
+                )}
+              >
+                {label}
+              </div>
+            ))}
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 }
