@@ -108,7 +108,7 @@ export default function TradeMark() {
         </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {new Array(10).fill("").map((item) => {
-          return <Card></Card>;
+          return <Card onClick={()=>router.push('/tradeMarkDetail?id=123')}></Card>;
         })}
       </div>
       <div className="mt-70px mb-95px">
