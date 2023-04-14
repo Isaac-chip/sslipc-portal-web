@@ -77,7 +77,7 @@ export default function PatentContent() {
         </div>
         <div className="mt-10">
           {new Array(10).fill("").map((item) => {
-            return <Card onClick={()=>router.push('/copyRightDetail?id=123')} className={"mb-6"}></Card>;
+            return <Card onClick={()=>router.push('/patentDetail?id=123')} className={"mb-6"}></Card>;
           })}
         </div>
 

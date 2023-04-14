@@ -14,7 +14,8 @@ export default function App({ Component, pageProps }) {
   console.log(router.pathname) 
   const pageBgColorList = {
     "/expertDetail":"#FFFFFF",
-    "/expert":"#FFFFFF"
+    "/expert":"#FFFFFF",
+    "/projectArea":"#FFFFFF"
   }
   return (
     <div className="flex flex-col justify-between  min-h-screen overflow-x-hidden" style={{background:pageBgColorList[router.pathname]?pageBgColorList[router.pathname]:"#F9F9F9"}}>

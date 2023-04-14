@@ -1,8 +1,9 @@
-export default function CopyRightCard({onClick}) {
+import classNames from "classnames";
+export default function CopyRightCard({onClick,className}) {
     return (
       <div
         onClick={onClick}
-        className="w-240px h-320px box-border px-2 pt-2"
+        className={classNames("w-240px h-320px box-border px-2 pt-2",className)}
         style={{
           background: "#F8FBFF",
   
