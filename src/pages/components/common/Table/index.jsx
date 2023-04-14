@@ -10,7 +10,7 @@ const Table = ({ data={
     ],
     rowSpan: [ // 可选。指定行合并的跨度
       [], 
-      [], 
+      [null,2], 
       []
       // ...
     ],
@@ -29,7 +29,7 @@ const Table = ({ data={
     <table className="table-auto border-collapse w-full">
       <thead>
         <tr>
-          {data.headers.map((header, index) => (
+          {data?.headers?.map((header, index) => (
             <th key={index} className="border px-4 py-2">
               {header}
             </th>
