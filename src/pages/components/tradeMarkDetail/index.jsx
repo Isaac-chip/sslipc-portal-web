@@ -113,7 +113,7 @@ export default function TradeMarkDetail() {
               ].map((item, index) => {
                 return (
                   <div className="flex mb-6">
-                    <div className="w-40px h-40px bg-blue-700 text-16 font-bold text-white rounded-full flex justify-center items-center">
+                    <div className="flex-shrink-0 w-40px h-40px bg-blue-700 text-16 font-bold text-white rounded-full flex justify-center items-center">
                       {index + 1}
                     </div>
                     <div className="ml-4">
