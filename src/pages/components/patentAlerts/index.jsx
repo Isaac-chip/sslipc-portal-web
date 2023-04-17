@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo } from "react";
 import SideBar from "../common/SideBar";
 import AlertSteps from "./alertSteps";
 import GuidanceCenter from "./guidanceCenter";
+import GlobalGuide from "./globalGuide";
 
 export default function PatentAlerts() {
   const [component, setComponent] = useState(null);
@@ -21,8 +22,13 @@ export default function PatentAlerts() {
       },
       {
         label: "全球维权指南",
-        children: [],
-        open: false,
+        children: [
+          {
+            label:"美国",
+            component:<GlobalGuide></GlobalGuide>
+          }
+        ],
+        open: true,
       },
     ],
     []

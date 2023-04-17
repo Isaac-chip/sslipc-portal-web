@@ -1,16 +1,14 @@
 import _ from "lodash";
-import { useEffect, useState, useCallback,useMemo } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import classNames from "classnames";
 
 export default function SideBar({ sideBar, setComponent }) {
-  const [{ menuActivity, subMenuActivity, activity }, setActivity] = useState(
-    {
-      menuActivity: 0,
-      subMenuActivity: 0,
-      activity: [0, 0],
-    }
-  );
-  
+  const [{ menuActivity, subMenuActivity, activity }, setActivity] = useState({
+    menuActivity: 0,
+    subMenuActivity: 0,
+    activity: [0, 0],
+  });
+  const [toggleIcon, setToggleIcon] = useState(false);
   const handleMenu = useCallback(
     (index) => {
       setSideBarData((prev) => {
@@ -25,14 +23,15 @@ export default function SideBar({ sideBar, setComponent }) {
         }
         return data;
       });
+
     },
     [sideBar]
   );
 
-  const [sideBarData,setSideBarData] = useState(sideBar);
-  useEffect(()=>{
+  const [sideBarData, setSideBarData] = useState(sideBar);
+  useEffect(() => {
     setComponent(sideBarData[0]?.component);
-  },[])
+  }, []);
 
   return (
     <div className="flex">
@@ -43,10 +42,9 @@ export default function SideBar({ sideBar, setComponent }) {
             <div
               onClick={() => {
                 handleMenu(index);
-                if(sideBarData[index]?.component){
+                if (sideBarData[index]?.component) {
                   setComponent(sideBarData[index]?.component);
                 }
-
               }}
               className={classNames(
                 "h-72px w-210px flex justify-around items-center bg-white",
@@ -56,21 +54,16 @@ export default function SideBar({ sideBar, setComponent }) {
               )}
               style={{
                 background:
-                  menuActivity === index
-                    ? "url(/rightFlow/xuanzhong.png)"
-                    : "",
+                  menuActivity === index ? "url(/rightFlow/xuanzhong.png)" : "",
               }}
             >
-              <div className="text-xl w-148px hover:text-gray-200">
-                {label}
-              </div>
+              <div className="text-xl w-148px hover:text-gray-200">{label}</div>
               {children?.length > 0 && (
                 <img
                   className={classNames({
-                    hidden: !open,
                   })}
                   src={
-                    menuActivity === index
+                    (!open)
                       ? `/icon/shangla.png`
                       : `/icon/down.png`
                   }
@@ -78,6 +71,7 @@ export default function SideBar({ sideBar, setComponent }) {
                   srcset=""
                 />
               )}
+             
             </div>
             {children?.map(({ label }, subIndex) => (
               <div
