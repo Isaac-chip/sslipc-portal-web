@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo } from "react";
 import SideBar from "../common/SideBar";
 import AlertSteps from "./alertSteps";
 import GuidanceCenter from "./guidanceCenter";
-import GlobalGuide from "./globalGuide";
+import USA from "./globalGuide/USA";
 
 export default function PatentAlerts() {
   const [component, setComponent] = useState(null);
@@ -25,7 +25,7 @@ export default function PatentAlerts() {
         children: [
           {
             label:"美国",
-            component:<GlobalGuide></GlobalGuide>
+            component:<USA></USA>
           }
         ],
         open: true,
@@ -34,7 +34,7 @@ export default function PatentAlerts() {
     []
   );
   return (
-    <div className="flex">
+    <div className="flex mb-4">
       <SideBar sideBar={sideBarList} setComponent={setComponent} />
       <div className="ml-4 w-full bg-white">{component}</div>
     </div>

@@ -8,7 +8,7 @@ export default function SideBar({ sideBar, setComponent }) {
     subMenuActivity: 0,
     activity: [0, 0],
   });
-  const [toggleIcon, setToggleIcon] = useState(false);
+
   const handleMenu = useCallback(
     (index) => {
       setSideBarData((prev) => {
@@ -31,19 +31,22 @@ export default function SideBar({ sideBar, setComponent }) {
   const [sideBarData, setSideBarData] = useState(sideBar);
   useEffect(() => {
     setComponent(sideBarData[0]?.component);
+
+   console.log(sideBarData[0]?.component)
   }, []);
 
   return (
     <div className="flex">
       <div>
         {/* 一级菜单 */}
-        {sideBarData.map(({ label, children = [], open, component }, index) => (
+        {sideBarData.map(({ label, children = [], open }, index) => (
           <div key={index} className="cursor-pointer">
             <div
               onClick={() => {
                 handleMenu(index);
                 if (sideBarData[index]?.component) {
                   setComponent(sideBarData[index]?.component);
+               
                 }
               }}
               className={classNames(
@@ -73,7 +76,7 @@ export default function SideBar({ sideBar, setComponent }) {
               )}
              
             </div>
-            {children?.map(({ label }, subIndex) => (
+            {children?.map(({ label,component }, subIndex) => (
               <div
                 key={subIndex}
                 onClick={() => {
@@ -82,7 +85,10 @@ export default function SideBar({ sideBar, setComponent }) {
                     subMenuActivity: subIndex,
                     activity: [index, subIndex],
                   });
-                  setComponent(component);
+                
+                    setComponent(component);
+                    console.log(component)
+          
                 }}
                 className={classNames(
                   "h-40px bg-white w-210px flex justify-center items-center text-md hover:text-blue",
