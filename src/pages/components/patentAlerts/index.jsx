@@ -1,6 +1,7 @@
 import { useState, useCallback, useMemo } from "react";
 import SideBar from "../common/SideBar";
 import AlertSteps from "./alertSteps";
+import GuidanceCenter from "./guidanceCenter";
 
 export default function PatentAlerts() {
   const [component, setComponent] = useState(null);
@@ -16,7 +17,7 @@ export default function PatentAlerts() {
         label: "国家海外知识产权纠纷应对指导",
         children: [],
         open: false,
-        component: <div>3333</div>,
+        component: <GuidanceCenter></GuidanceCenter>,
       },
       {
         label: "全球维权指南",
