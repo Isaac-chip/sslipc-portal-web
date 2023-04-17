@@ -3,6 +3,10 @@ import SideBar from "../common/SideBar";
 import AlertSteps from "./alertSteps";
 import GuidanceCenter from "./guidanceCenter";
 import USA from "./globalGuide/USA";
+import UK from "./globalGuide/UK";
+import EU from "./globalGuide/EU";
+import JP from "./globalGuide/JP";
+import Kr from "./globalGuide/Kr";
 
 export default function PatentAlerts() {
   const [component, setComponent] = useState(null);
@@ -26,7 +30,25 @@ export default function PatentAlerts() {
           {
             label:"美国",
             component:<USA></USA>
+          },
+          {
+            label:"英国",
+            component:<UK></UK>
+          },
+          {
+            label:"欧盟",
+            component:<EU></EU>
+          },
+          {
+            label:"日本",
+            component:<JP></JP>
+          },
+          {
+            label:"韩国",
+            component:<Kr></Kr>
           }
+
+
         ],
         open: true,
       },
