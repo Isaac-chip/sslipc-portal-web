@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Tabs, Dropdown, Sidebar } from "flowbite-react";
 import BreadcrumbPlus from "../common/BreadcrumbPlus";
 import SideBar from "../common/SideBar";
 import Steps from "../common/Steps";
 
 export default function RightsFlow() {
+  const [component, setComponent] = useState(null);
   const sideBarList = [
     {
       label: "维权流程",
@@ -38,7 +40,7 @@ export default function RightsFlow() {
         ></BreadcrumbPlus>
       </div>
       <div className="flex w-full">
-        <SideBar sideBar={sideBarList}></SideBar>
+        <SideBar sideBar={sideBarList} setComponent={setComponent} ></SideBar>
         <div className="ml-2 bg-white w-full">
           <div className="mt-23px">
             <Steps></Steps>
