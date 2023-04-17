@@ -30,9 +30,14 @@ export default function SideBar({ sideBar, setComponent }) {
 
   const [sideBarData, setSideBarData] = useState(sideBar);
   useEffect(() => {
-    setComponent(sideBarData[0]?.component);
+    if(sideBarData[0].component){
+      setComponent(sideBarData[0]?.component);
+    }else {
+      setComponent(sideBarData[0].children[0].component);
+    }
+    
 
-   console.log(sideBarData[0]?.component)
+
   }, []);
 
   return (
