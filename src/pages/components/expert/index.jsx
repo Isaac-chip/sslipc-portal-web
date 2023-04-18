@@ -21,7 +21,7 @@ export default function Expert() {
         <Button text={"知识产权专家"}></Button>
       </div>
       <div className="mt-40px mb-131px flex flex-wrap sm:justify-between justify-center flex-1">
-        {new Array(count).fill("").map((item) => {
+        {new Array(count).fill("")?.map((item) => {
           return (
             <div className="mb-40px" onClick={()=>router.push('/expertDetail?id=123')}>
               <ExpertCard></ExpertCard>

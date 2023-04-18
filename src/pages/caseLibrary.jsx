@@ -7,7 +7,7 @@ export default function caseLibraryPage() {
         <div className="mb-20px ">
           <div className=" bg-white pt-12px pr-37px pl-21px pb-20px">
             <div className="text-xxl font-bold">维权援助指导文件</div>
-            {new Array(3).fill("").map((item) => {
+            {new Array(3).fill("")?.map((item) => {
               return (
                 <div className="border-b" style={{ borderColor: "#D6E4F4" }}>
                   <div className="text-xl pt-15px pb-7px">

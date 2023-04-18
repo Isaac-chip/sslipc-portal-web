@@ -10,7 +10,7 @@ import _ from "lodash";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { fakeData } from "@/pages/constants.js";
+import { fakeData } from "../../../../constants/index";
 
 export default function Banner({}) {
   const [isHovered, setIsHovered] = useState(false);
@@ -56,7 +56,7 @@ export default function Banner({}) {
                 "cursor-pointer flex justify-around h-full items-center text-white text-md font-bold text-center"
               )}
             >
-              {Object.keys(fakeData).map((item, index) => {
+              {Object.keys(fakeData)?.map((item, index) => {
                 return (
                   <li
                     key={item + index}
@@ -76,8 +76,8 @@ export default function Banner({}) {
               hidden: !isHovered,
             })}
           >
-            {Object.keys(Data).map((item, index) => {
-              if (Data[item].length === 0)
+            {Object.keys(Data)?.map((item, index) => {
+              if (Data[item]?.length === 0)
                 return (
                   <ul
                     key={item + index}
@@ -89,7 +89,7 @@ export default function Banner({}) {
                   key={item + index}
                   className="min-w-1/7 text-center text-white cursor-pointer"
                 >
-                  {Data[item].map((subItem) => {
+                  {Data[item]?.map((subItem) => {
                     return (
                       <li
                         

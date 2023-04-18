@@ -37,9 +37,9 @@ const Table = ({ data={
         </tr>
       </thead>
       <tbody>
-        {data.rows.map((row, rowIndex) => (
+        {data.rows?.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            {row.map((cell, colIndex) => {
+            {row?.map((cell, colIndex) => {
               if (mergedRows.includes(rowIndex) || mergedCols.includes(colIndex)) {
                 return null;
               }

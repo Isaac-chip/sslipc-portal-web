@@ -1,4 +1,4 @@
-import Banner from "./banner";
+import Banner from "@/pages/components/Financial/banner.jsx";
 import Summary from "./summary";
 import PolicyCard from "./policyCard";
 export default function Financial() {
@@ -182,7 +182,7 @@ export default function Financial() {
       >
         <div className="mt-33px mx-auto container">
           <div className="flex flex-1 flex-wrap justify-between">
-            {data.map((item) => {
+            {data?.map((item) => {
               return (
                 <div key={item}>
                   <div className="flex  box-border mb-30px">

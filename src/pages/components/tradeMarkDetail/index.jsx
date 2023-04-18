@@ -110,7 +110,7 @@ export default function TradeMarkDetail() {
                   title: "商标转让是否一定要提交公证书？",
                   des: "商标局已不强制要求提交转让公证书。但最好是去公证处做商标转让公证，特别是因商标买卖而做的转让公证，公证可以证明转让人的意思表示真实、主体资格合格，有利于保障商标买方的合法权益，增强双方的信任程度。",
                 },
-              ].map((item, index) => {
+              ]?.map((item, index) => {
                 return (
                   <div className="flex mb-6">
                     <div className="flex-shrink-0 w-40px h-40px bg-blue-700 text-16 font-bold text-white rounded-full flex justify-center items-center">
@@ -143,7 +143,7 @@ export default function TradeMarkDetail() {
                 flexWrap: "nowrap",
               }}
             >
-              {new Array(10).fill("").map((item) => {
+              {new Array(10).fill("")?.map((item) => {
                 return (
                     <div className="w-240px ml-2 mb-2">
                          <Card></Card>
@@ -161,10 +161,10 @@ export default function TradeMarkDetail() {
   return (
     <>
       <TitleCard></TitleCard>
-      {tabs.map((item) => {
+      {tabs?.map((item) => {
         return (
           <div className="bg-white mt-4 ">
-            <TabsPlus tabs={item.tab}></TabsPlus>
+            <TabsPlus activeTab={0} tabs={item.tab}></TabsPlus>
           </div>
         );
       })}

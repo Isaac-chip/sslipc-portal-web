@@ -16,7 +16,7 @@ export default function Bottom() {
             }}
           >
             {
-                new Array(10).fill().map((item)=>{
+                new Array(10).fill()?.map((item)=>{
                     return (
                         <Card></Card>
                     )
@@ -31,7 +31,7 @@ export default function Bottom() {
   ];
   return (
     <div className="mb-100px">
-      <TabsPlus tabs={tabs}></TabsPlus>
+      <TabsPlus activeTab={0} tabs={tabs}></TabsPlus>
     </div>
   );
 }

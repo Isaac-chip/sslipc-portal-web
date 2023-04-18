@@ -50,7 +50,7 @@ export default function PatentContent() {
   return (
     <div className="flex">
       <div className="flex-grow">
-        {arr.map((item) => {
+        {arr?.map((item) => {
           return (
             <div className="mt-4">
               <Options labelText={item.label} items={item.options} />
@@ -76,7 +76,7 @@ export default function PatentContent() {
           <SortButton text={"价格排序"}></SortButton>
         </div>
         <div className="mt-10">
-          {new Array(10).fill("").map((item) => {
+          {new Array(10).fill("")?.map((item) => {
             return <Card onClick={()=>router.push('/patentDetail?id=123')} className={"mb-6"}></Card>;
           })}
         </div>

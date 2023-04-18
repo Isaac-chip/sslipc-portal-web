@@ -14,7 +14,7 @@ export default function PublicService() {
   const tabs = [
     { label: "新闻动态", content: <div>
       {
-        new Array(10).fill("").map((item)=>{
+        new Array(10).fill("")?.map((item)=>{
           return <Card></Card> 
         })
       }

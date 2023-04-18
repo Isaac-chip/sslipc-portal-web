@@ -29,7 +29,7 @@ export default function Copyright() {
   return (
     <>
       <div className="mt-2">
-        {arr.map((item) => {
+        {arr?.map((item) => {
           return (
             <div className="mb-5">
               <Options labelText={item.label} items={item.options}></Options>

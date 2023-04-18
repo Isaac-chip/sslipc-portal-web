@@ -12,7 +12,7 @@ export default function ProjectArea() {
           alt=""
           srcset=""
         />
-        {new Array(4).fill("").map((item) => {
+        {new Array(4).fill("")?.map((item) => {
           return <PatentDetailCard></PatentDetailCard>;
         })}
       </div>
@@ -23,7 +23,7 @@ export default function ProjectArea() {
           alt=""
           srcset=""
         />
-        {new Array(4).fill("").map((item) => {
+        {new Array(4).fill("")?.map((item) => {
           return <TradeMarkCard></TradeMarkCard>;
         })}
       </div>
@@ -34,7 +34,7 @@ export default function ProjectArea() {
           alt=""
           srcset=""
         />
-        {new Array(4).fill("").map((item) => {
+        {new Array(4).fill("")?.map((item) => {
           return <CopyRightCard></CopyRightCard>;
         })}
       </div>

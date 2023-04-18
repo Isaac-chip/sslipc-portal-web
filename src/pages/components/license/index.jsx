@@ -31,7 +31,7 @@ export default function License() {
   return (
     <div className="container mx-auto">
       <div className="flex relative ">
-        <TabsPlus className="flex-shrink-0" tabs={tabs}></TabsPlus>
+        <TabsPlus activeTab={0} className="flex-shrink-0" tabs={tabs}></TabsPlus>
         <div className="absolute right-0 top-1 w-106px h-48px rounded-full bg-blue flex justify-center items-center text-white text-xl font-bold">
           发布
         </div>

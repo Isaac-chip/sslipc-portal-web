@@ -32,7 +32,7 @@ export default function Step2() {
             {item}
             <div className="ml-2 ">
               <div className="flex ">
-                {checkBoxRowData[item].map((item) => {
+                {checkBoxRowData[item]?.map((item) => {
                   return <Checkbox data={item}></Checkbox>;
                 })}
               </div>

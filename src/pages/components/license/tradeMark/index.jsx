@@ -94,7 +94,7 @@ export default function TradeMark() {
   return (
     <>
       <div>
-        {arr.map((item) => {
+        {arr?.map((item) => {
           return (
             <div className="mb-6">
               <Options labelText={item.label} items={item.options}></Options>
@@ -107,7 +107,7 @@ export default function TradeMark() {
           <SortButton text={"价格排序"}></SortButton>
         </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        {new Array(10).fill("").map((item) => {
+        {new Array(10).fill("")?.map((item) => {
           return <Card onClick={()=>router.push('/tradeMarkDetail?id=123')}></Card>;
         })}
       </div>

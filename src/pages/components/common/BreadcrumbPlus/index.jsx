@@ -18,7 +18,7 @@ export default function BreadcrumbPlus({
           >
             首页
           </Breadcrumb.Item>
-          {BreadcrumbList.map((item) => {
+          {BreadcrumbList?.map((item) => {
             return (
               <Breadcrumb.Item
                 href={item.href}

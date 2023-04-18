@@ -15,7 +15,7 @@ export default function PolicyInfoPage() {
       content: (
         <div className="relative">
           <div>
-            {new Array(10).fill("").map((item) => {
+            {new Array(10).fill("")?.map((item) => {
               return <Card></Card>;
             })}
           </div>

@@ -118,7 +118,7 @@ export default function SpecialInformation() {
 
               <div className="flow-root">
                 <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-                  {fakeData.news.map((item, index) => {
+                  {fakeData.news?.map((item, index) => {
                     return (
                       <li key={item + "-" + index} className="py-3 ">
                         <div className="flex items-center space-x-4">

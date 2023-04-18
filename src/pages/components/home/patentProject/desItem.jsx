@@ -13,20 +13,20 @@ export default function DescItem({ isShowMask,data={光电领域: ["专利类型
         //   "linear-gradient(270deg, #FFFFFF 0%, rgba(217,217,217,0) 85%)",
       }}
     >
-      {Object.keys(data).map((item) => {
+      {Object.keys(data)?.map((item) => {
         return (
           <div className="ml-20">
             <div className="font-bold text-xl pt-32px text-white">{item}</div>
             <div className="pt-10px">
               <div className="bg-blak flex">
-                {data[item].map((subItem, index) => {
+                {data[item]?.map((subItem, index) => {
                   return (
                     <div className="flex text-xs items-center text-gray-200">
                       <div>{subItem}</div>
                       <div
                         className={classNames(
                           "text-sm align-middle pb-1px px-1",
-                          { hidden: data[item].length === index + 1 }
+                          { hidden: data[item]?.length === index + 1 }
                         )}
                       >
                         |

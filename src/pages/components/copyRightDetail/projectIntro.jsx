@@ -46,7 +46,7 @@ export default function ProjectIntro() {
                   flexWrap: "nowrap",
                 }}
               >
-                {new Array(10).fill("").map((item) => {
+                {new Array(10).fill("")?.map((item) => {
                   return (
                     <img
                       className="w-290px h-230px bg-black mr-2 mb-4"
@@ -75,7 +75,7 @@ export default function ProjectIntro() {
                     flexWrap: "nowrap",
                   }}
                 >
-                  {new Array(10).fill("").map((item) => {
+                  {new Array(10).fill("")?.map((item) => {
                     return (
                         <div className="w-240px ml-2 mb-2">
                              <CopyRightCard></CopyRightCard>
@@ -92,9 +92,9 @@ export default function ProjectIntro() {
   ];
   return (
     <div className="mb-10">
-      {tabs.map((tabItem, index) => (
+      {tabs?.map((tabItem, index) => (
         <div className="bg-white mt-4" key={index}>
-          <TabsPlus tabs={tabItem.tab} />
+          <TabsPlus activeTab={0} tabs={tabItem.tab} />
         </div>
       ))}
     </div>

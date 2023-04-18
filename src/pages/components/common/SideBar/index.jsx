@@ -44,7 +44,7 @@ export default function SideBar({ sideBar, setComponent }) {
     <div className="flex">
       <div>
         {/* 一级菜单 */}
-        {sideBarData.map(({ label, children = [], open }, index) => (
+        {sideBarData?.map(({ label, children = [], open }, index) => (
           <div key={index} className="cursor-pointer">
             <div
               onClick={() => {

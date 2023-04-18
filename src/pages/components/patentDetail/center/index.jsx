@@ -65,7 +65,7 @@ export default function Center() {
 
   return (
     <div className="mt-4 bg-white">
-      <TabsPlus tabs={tabs}></TabsPlus>
+      <TabsPlus activeTab={0} tabs={tabs}></TabsPlus>
     </div>
   );
 }

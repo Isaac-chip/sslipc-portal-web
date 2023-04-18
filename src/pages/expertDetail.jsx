@@ -14,7 +14,7 @@ export default function expertDetailPage() {
       content: (
         <div className="relative">
           <div className="grid grid-cols-4 gap-4">
-            {new Array(10).fill("").map((item) => {
+            {new Array(10).fill("")?.map((item) => {
               return (
                 <div className="mb-30px">
                   <ExpertCard></ExpertCard>

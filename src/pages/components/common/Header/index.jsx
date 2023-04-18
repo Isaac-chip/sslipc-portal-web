@@ -7,7 +7,7 @@ import LoginButton from "./login";
 
 import Search from "./searchInput";
 
-import { fakeData } from "@/pages/constants.js";
+import { fakeData } from "../../../../constants/index";
 
 export default function Index() {
   return (
@@ -32,13 +32,13 @@ export default function Index() {
           </div>
           <div className="md:hidden pt-10px">
             <Accordion alwaysOpen={true}>
-              {Object.keys(fakeData).map((item,index) => {
+              {Object.keys(fakeData)?.map((item,index) => {
                 return (
                   <Accordion.Panel key={item+'-'+index}>
                     <Accordion.Title>{item}</Accordion.Title>
                     <Accordion.Content>
                       <div className={classNames("w-full flex flex-wrap")}>
-                        {fakeData[item].map((subItem,index) => {
+                        {fakeData[item]?.map((subItem,index) => {
                           return (
                             <Link
                               key={subItem.label+'-'+index}

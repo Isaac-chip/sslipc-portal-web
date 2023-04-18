@@ -23,7 +23,7 @@ export default function Step1() {
       <div className="text-lg mt-10px mb-20px">当前检索共0条专利</div>
       <form>
         <div class="sm:col-span-3">
-          {new Array(count).fill("").map((item) => {
+          {new Array(count).fill("")?.map((item) => {
             return (
               <div class="mt-2 flex">
                 <div className="mb-4">
