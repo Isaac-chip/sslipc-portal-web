@@ -1,4 +1,4 @@
-import Banner from "@/pages/components/Financial/banner.jsx";
+import Banner from "./banner";
 import Summary from "./summary";
 import PolicyCard from "./policyCard";
 export default function Financial() {
