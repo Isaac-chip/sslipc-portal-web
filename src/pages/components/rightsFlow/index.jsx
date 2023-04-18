@@ -19,7 +19,7 @@ export default function RightsFlow() {
           component: <img className="mx-auto" src="/rightFlow/flow1.jpg"></img>,
         },
         // { label: "仲裁调解流程" },
-        { label: "专利侵权纠纷提交材料" },
+        // { label: "专利侵权纠纷提交材料" },
       ],
       open: true,
     },
@@ -1094,11 +1094,11 @@ export default function RightsFlow() {
         </div>
       )
     },
-    {
-      label: "维权援助相关资料",
-      children: [],
-      open: false,
-    },
+    // {
+    //   label: "维权援助相关资料",
+    //   children: [],
+    //   open: false,
+    // },
   ];
   return (
     <div className="container mx-auto">

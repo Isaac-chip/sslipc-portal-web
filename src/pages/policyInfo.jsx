@@ -19,7 +19,7 @@ export default function PolicyInfoPage() {
               return <Card></Card>;
             })}
           </div>
-          <div className="h-full w-2px bg-gray-400 absolute top-0" style={{left:"-19px;"}}></div>  
+          <div className="h-full w-2px bg-gray-400 absolute top-0 -l-19px"></div>  
          
         </div>
       ),
