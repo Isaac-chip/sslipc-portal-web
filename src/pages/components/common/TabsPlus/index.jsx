@@ -6,7 +6,7 @@ export default function TabsPlus({ tabs, activeTab = 0, onTabChange }) {
   return (
     <>
   
-      {/* <Tabs.Group
+      <Tabs.Group
         onActiveTabChange={onTabChange}
         aria-selected={" bg-pink-950"}
         aria-label="Tabs with underline"
@@ -38,7 +38,7 @@ export default function TabsPlus({ tabs, activeTab = 0, onTabChange }) {
           </Tabs.Item>
         ))} 
        
-      </Tabs.Group> */}
+      </Tabs.Group>
       
       
     
