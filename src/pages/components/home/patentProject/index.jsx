@@ -22,9 +22,9 @@ export default function PatentProject() {
           <div className="">
            
             <div className="w-300px pb-40px relative mx-auto sm:mx-0">
-              <DescItem isShowMask={true}></DescItem>
-              <DescItem></DescItem>
-              <DescItem></DescItem>
+              <DescItem isShowMask={true} data={{"医疗器械":["专利类型", "专利价格", "专利介绍"]}}></DescItem>
+              <DescItem data={{"新一代电子":["专利类型", "专利价格", "专利介绍"]}}></DescItem>
+              <DescItem data={{"电化学储能":["专利类型", "专利价格", "专利介绍"]}}></DescItem>
               <div className="absolute -top-8 right-0 font-bold text-sm text-white">
               查看更多
             </div>
