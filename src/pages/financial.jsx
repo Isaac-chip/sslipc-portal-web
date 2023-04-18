@@ -1,9 +1,9 @@
-import Financial from "@/pages/components/Financial/index"
+// import Financial from "@/pages/components/Financial/index"
 
 export default function financialPage(){
     return (
         <div style={{background:"#FFFFFF"}}>
-           <Financial></Financial> 
+           {/* <Financial></Financial>  */}
         </div>
     )
 }
