@@ -1,4 +1,4 @@
-import Financial from "./components/Financial"
+import Financial from "./components/expert"
 
 export default function financialPage(){
     return (
