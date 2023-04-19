@@ -19,7 +19,7 @@ export default function TabsPlus({ tabs, activeTab = 0 }) {
           </div>
         </div>
         {/* content */}
-        <div className="mt-4 pb-2 pl-4">
+        <div className="mt-4 pb-2 px-4">
           {tabs && tabs[activeIndex]?.content}
         </div>
       </div>
