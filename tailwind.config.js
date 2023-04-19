@@ -37,7 +37,8 @@ module.exports = {
       xxl:"22px",
       xxxl:"24px",
       28:"28px",
-      30:"30px"
+      30:"30px",
+      38:"38px"
 
 
     },

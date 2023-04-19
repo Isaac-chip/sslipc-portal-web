@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import Header from "./components/common/Header/index";
 import IpServices from "./components/home/ipServices";
 import SpecialInformation from "./components/home/specialInformation";
 import StrategicPartners from "./components/home/strategicPartners";
