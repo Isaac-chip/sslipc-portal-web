@@ -7,7 +7,7 @@ export default function TabsPlus({ tabs, activeTab = 0 }) {
     <>
       <div className="w-full">
         <div className=" mx-auto">
-          <div className="flex items-center -mb-px flex-grow border-b border-gray-200 ">
+          <div className="flex items-center -mb-px flex-grow border-b border-gray-200 ml-4">
            
             {
               tabs?.map((tab,index)=>{
@@ -19,7 +19,7 @@ export default function TabsPlus({ tabs, activeTab = 0 }) {
           </div>
         </div>
         {/* content */}
-        <div className="mt-4">
+        <div className="mt-4 pb-2 pl-4">
           {tabs && tabs[activeIndex]?.content}
         </div>
       </div>

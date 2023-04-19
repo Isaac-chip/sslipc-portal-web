@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { Card } from "flowbite-react";
 import { useState } from "react";
 import IntroTitle from "../../common/IntroTitle";
+import { useRouter } from "next/router";
 
 export default function SpecialInformation() {
   const [active, setActive] = useState();
@@ -30,6 +31,8 @@ export default function SpecialInformation() {
     ],
     trends: [],
   };
+
+  const router = useRouter()
   return (
     <div>
       <div className="mt-73px mb-42px">
@@ -41,6 +44,7 @@ export default function SpecialInformation() {
           <div className="  lg:mr-6">
             <div className="relative w-400px h-300px mb-10 lg:mb-0 bg-black smmr-2: mx-auto ">
               <img
+               onClick={()=>router.push('/newsDetail?id=111')}
                 className="w-full h-full "
                 src="https://ts3.cn.mm.bing.net/th?id=ORMS.2d6d7f75944705cb4a16d5fe73585eec&pid=Wdp&w=300&h=156&qlt=90&c=1&rs=1&dpr=1&p=0"
                 alt=""
@@ -123,7 +127,7 @@ export default function SpecialInformation() {
                       <li key={item + "-" + index} className="py-3 ">
                         <div className="flex items-center space-x-4">
                           <div className="w-2/3 xs:min-w-0 flex-1">
-                            <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
+                            <p  onClick={()=>router.push('/newsDetail?id=111')} className="truncate text-sm font-medium text-gray-900 dark:text-white hover:text-blue cursor-pointer hover:underline">
                               {item.title}
                             </p>
                           </div>

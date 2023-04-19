@@ -3,19 +3,21 @@ import TabsPlus from "../common/TabsPlus";
 import { useState } from "react";
 import Card from "./card";
 import PaginationPlus from "../common/Pagination";
+import { useRouter } from "next/router";
 export default function PublicService() {
   const [pageSize, setPageSize] = useState(1);
   const [activeTab, setActiveTab] = useState(0);
+  const router = useRouter()
 
   const handleTabChange = (index) => {
     setActiveTab(index);
   };
 
   const tabs = [
-    { label: "新闻动态", content: <div>
+    { label: "最新公告", content: <div>
       {
         new Array(10).fill("")?.map((item)=>{
-          return <Card></Card> 
+          return <Card onClick={()=>router.push('/newsDetail?id=111')}></Card> 
         })
       }
     </div> },

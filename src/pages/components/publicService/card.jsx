@@ -1,9 +1,9 @@
-export default function Card() {
+export default function Card({onClick}) {
   return (
-    <div className=" flex justify-between pb-10 border-b-2" style={{borderBottom:"1px solid #F0F3F7"}}>
+    <div onClick={onClick} className="cursor-pointer flex justify-between pb-10 border-b-2" style={{borderBottom:"1px solid #F0F3F7"}}>
       <div className="flex relative container">
         <img
-          className="w-2/12 sm:w-4/12 h-full shadow-2xl"
+          className="w-400px sm:w-4/12 h-full shadow-2xl"
           src="https://ts2.cn.mm.bing.net/th?id=ORMS.f493b8d02a263aa14f115f7a5895ca13&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=2&p=0"
           alt=""
           srcset=""

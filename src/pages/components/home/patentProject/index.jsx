@@ -31,12 +31,13 @@ export default function PatentProject() {
             </div>
           </div>
           <div className="w-5/6 flex flex-wrap sm:justify-between mx-auto sm:mx-0 justify-center">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <Card img={'/home/tp1.png'}></Card>
+            <Card img={'/home/tp3.png'}></Card>
+            <Card img={'/home/tp5.png'}></Card>
+            <Card img={'/home/tp2.png'}></Card>
+            <Card img={'/home/tp4.png'}></Card>
+            <Card img={'/home/tp6.png'}></Card>
+            
           </div>
         </div>
       </div>
