@@ -4,7 +4,6 @@ export default function Top() {
   return (
     <>
       <div
-        // onClick={onClick}
         className={classNames(
           "bg-white cursor-pointer flex px-3 py-6 border-b border-gray-200"
         )}

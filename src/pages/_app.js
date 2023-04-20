@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     console.log(router.pathname);
-    if (router.pathname == "/login") {
+    if (router.pathname == "/login" || router.pathname == "/register") {
       setIsShowRootComponent(false);
     } else {
       setIsShowRootComponent(true);
@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }) {
     "/projectArea": "#FFFFFF",
     "/newsDetail": "#FFFFFF",
     "/login": "#FFFFFF",
+  
   };
   return (
     <div
