@@ -20,7 +20,7 @@ export default function Expert() {
         <Button text={"技术专家"}></Button>
         <Button text={"知识产权专家"}></Button>
       </div>
-      <div className="mt-40px mb-131px flex flex-wrap sm:justify-between justify-center flex-1">
+      <div className="mt-40px mb-131px grid grid-cols-5">
         {new Array(count).fill("")?.map((item) => {
           return (
             <div className="mb-40px" onClick={()=>router.push('/expertDetail?id=123')}>
