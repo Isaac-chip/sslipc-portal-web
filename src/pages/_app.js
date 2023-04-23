@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     console.log(router.pathname);
-    if (router.pathname == "/login" || router.pathname == "/register") {
+    if (router.pathname == "/login" || router.pathname == "/register" || router.pathname == "/resetPassword") {
       setIsShowRootComponent(false);
     } else {
       setIsShowRootComponent(true);

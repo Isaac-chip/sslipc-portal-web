@@ -14,13 +14,14 @@ export default function Expert() {
         src="/expert/zhuanjia.png"
       ></Image>
       <div className="flex justify-between">
+      <Button text="全部"></Button>
         <Button text="首席专家"></Button>
         <Button text={"法律专家"}></Button>
         <Button text={"投资专家"}></Button>
         <Button text={"技术专家"}></Button>
         <Button text={"知识产权专家"}></Button>
       </div>
-      <div className="mt-40px mb-131px grid grid-cols-5">
+      <div className="mt-40px mb-131px grid grid-cols-5 gap-8">
         {new Array(count).fill("")?.map((item) => {
           return (
             <div className="mb-40px" onClick={()=>router.push('/expertDetail?id=123')}>

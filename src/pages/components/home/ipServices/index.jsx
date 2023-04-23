@@ -4,7 +4,7 @@ import IntroTitle from "../../common/IntroTitle"
 
 export default function IpServices (params) {
     return (
-        <div className="container mx-auto mt-38px">
+        <div className="mx-auto mt-38px" style={{width:"1000px"}}>
             <IntroTitle title="知识产权服务" desc="Intellectual Property Services"></IntroTitle>
             <div className="mt-40px flex sm:justify-between flex-wrap justify-around">
                 <div className="w-140px">

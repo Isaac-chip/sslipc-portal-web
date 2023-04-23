@@ -5,10 +5,10 @@ import Card from "./card";
 export default function PatentProject() {
   return (
     <div
-      className="w-full bg-slate-300 mt-60px h-full"
-      style={{ background: "url(/patentProject/bg2.png)" }}
+      className="w-full mt-60px h-full"
+      
     >
-      <div className="container mx-auto h-full xs:h-screen">
+      <div className="container mx-auto h-full xs:h-screen px-6" style={{ background: "url(/patentProject/bg2.png)" }}>
         <div className="pt-20px">
           <IntroTitle
             className="pt-20px"
