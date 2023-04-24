@@ -18,21 +18,28 @@ export default function Banner({}) {
 
   return (
     <div className="w-full relative">
-      <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <SwiperSlide>
-          <img className="object-cover w-full" src="/banner/banner.png" alt="" />
-        </SwiperSlide>
-      </Swiper>
+      <div className="">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          <SwiperSlide>
+            <img
+              className="object-cover w-full h-450px"
+              src="/banner/banner.png"
+              alt=""
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+
       <div
         onMouseEnter={() => {
           setIsHovered(true);
@@ -46,14 +53,14 @@ export default function Banner({}) {
           { "bg-opacity-10": !isHovered }
         )}
       >
-        <div className="w-full">
-          <div className="container h-40px mx-auto hidden md:block">
+        <div className="w-full h-full">
+          <div className="container  mx-auto hidden md:block">
             <ul
               onMouseEnter={() => {
                 setIsHovered(true);
               }}
               className={classNames(
-                "cursor-pointer flex justify-around h-full items-center text-white text-md font-bold text-center"
+                "h-70px cursor-pointer flex justify-around items-center text-white text-md font-bold text-center"
               )}
             >
               {Object.keys(fakeData)?.map((item, index) => {
@@ -92,7 +99,6 @@ export default function Banner({}) {
                   {Data[item]?.map((subItem) => {
                     return (
                       <li
-                        
                         onMouseEnter={() => {
                           setIsHovered(true);
                           console.log("123");
@@ -100,7 +106,9 @@ export default function Banner({}) {
                         key={item + index + "-" + subItem.label}
                         className="hover:text-yellow truncate pt-30px"
                       >
-                        <Link target={subItem?.target} href={subItem.router}>{subItem.label}</Link>
+                        <Link target={subItem?.target || "_blank"} href={subItem.router}>
+                          {subItem.label}
+                        </Link>
                       </li>
                     );
                   })}

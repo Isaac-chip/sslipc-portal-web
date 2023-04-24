@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="mt-33px font-medium text-gray-400">
               <Link
                 target={"_bank"}
-                href={"https://www.gippc.com.cn/ippc/index.shtml"}
+                href={"http://www.sipc26.com/"}
               >
                 <div className="text-xs mb-13px">南方中心</div>
               </Link>

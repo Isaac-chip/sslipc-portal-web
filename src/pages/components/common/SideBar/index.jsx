@@ -71,7 +71,7 @@ export default function SideBar({ sideBar, setComponent }) {
                   className={classNames({
                   })}
                   src={
-                    (!open)
+                    (open)
                       ? `/icon/shangla.png`
                       : `/icon/down.png`
                   }

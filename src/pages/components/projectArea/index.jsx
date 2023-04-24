@@ -5,7 +5,7 @@ import PatentDetailCard from "../patentDetail/card";
 export default function ProjectArea() {
   return (
     <>
-      <div className="grid grid-cols-5 gap-4 mb-4">
+      <div className="grid grid-cols-5 gap-4 ">
         <img
           className="w-240px h-308px"
           src="/projectArea/zhuanli.png"
@@ -16,7 +16,7 @@ export default function ProjectArea() {
           return <PatentDetailCard></PatentDetailCard>;
         })}
       </div>
-      <div className="grid grid-cols-5 gap-4 mb-4">
+      <div className="grid grid-cols-5 gap-4 mb-5">
         <img
           className="w-240px h-350px"
           src="/projectArea/shangbiao.png"
@@ -27,7 +27,7 @@ export default function ProjectArea() {
           return <TradeMarkCard></TradeMarkCard>;
         })}
       </div>
-      <div className="grid grid-cols-5 gap-4 mb-4">
+      <div className="grid grid-cols-5 gap-4 mb-5">
         <img
           className="w-240px h-320px"
           src="/projectArea/shangbviao.png"

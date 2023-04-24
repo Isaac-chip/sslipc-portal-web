@@ -19,7 +19,7 @@ export default function Card({onClick}) {
           <div className="flex items-center mt-2 justify-between">
             <div className="font-bold text-xl">唐匠布乙</div>
             <div
-              className="w-52px text-sm px-2 py-1 box-border"
+              className="w-54px text-sm px-2 py-1 box-border"
               style={{
                 borderRadius: "2px 2px 2px 2px",
                 opacity: "1",

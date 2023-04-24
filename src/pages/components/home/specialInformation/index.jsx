@@ -4,6 +4,7 @@ import { useState } from "react";
 import IntroTitle from "../../common/IntroTitle";
 import { useRouter } from "next/router";
 
+
 export default function SpecialInformation() {
   const [active, setActive] = useState();
   const fakeData = {
@@ -42,7 +43,7 @@ export default function SpecialInformation() {
       <div className=" container mx-auto items-center">
         <div className="block lg:flex justify-center">
           <div className="  lg:mr-6">
-            <div className="relative w-400px h-300px mb-10 lg:mb-0 bg-black smmr-2: mx-auto ">
+            <div className="relative w-500px h-400px mb-10 lg:mb-0 bg-black smmr-2: mx-auto ">
               <img
                onClick={()=>router.push('/newsDetail?id=111')}
                 className="w-full h-full "
@@ -104,7 +105,7 @@ export default function SpecialInformation() {
                     行业动态
                   </div>
                 </div>
-                <div className={classNames("flex items-center")}>
+                <div onClick={()=>router.push("/publicService")} className={classNames("flex items-center cursor-pointer")}>
                   <div
                     className={classNames(
                       "text-xs text-gray-light font-medium mr-6px"
