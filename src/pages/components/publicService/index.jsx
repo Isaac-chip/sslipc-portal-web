@@ -21,7 +21,13 @@ export default function PublicService() {
         })
       }
     </div> },
-    { label: "行业资讯", content: <div>Content for Tab 2</div> },
+    { label: "行业资讯", content: <div>
+    {
+      new Array(10).fill("")?.map((item)=>{
+        return <Card onClick={()=>router.push('/newsDetail?id=111')}></Card> 
+      })
+    }
+  </div>  },
     
   ];
   const onPageChange = (e) => {
@@ -30,7 +36,7 @@ export default function PublicService() {
   };
   return (
     <div>
-      <img src="/publicService/banner2.png" />
+      <img className="w-full" src="/publicService/banner2.png" />
       <div className="container mx-auto mt-10px">
         <TabsPlus
           activeTab={activeTab}
