@@ -43,7 +43,7 @@ export default function SpecialInformation() {
       <div className=" container mx-auto items-center">
         <div className="block lg:flex justify-center">
           <div className="  lg:mr-6">
-            <div className="relative w-500px h-400px mb-10 lg:mb-0 bg-black smmr-2: mx-auto ">
+            <div className="relative w-500px h-360px mb-10 lg:mb-0 bg-black smmr-2: mx-auto ">
               <img
                onClick={()=>router.push('/newsDetail?id=111')}
                 className="w-full h-full "
@@ -81,7 +81,7 @@ export default function SpecialInformation() {
           </div>
      
             <div
-              className="xs:w-720px xs:h-300px bg-blue-light box-border pt-20px pr-28px pl-27px "
+              className="w-10/12 xs:w-720px xs:h-300px bg-blue-light box-border pt-20px pr-28px pl-27px "
               style={{
                 boxShadow: "2px 3px 12px 3px rgba(50,119,237,0.08)",
               }}

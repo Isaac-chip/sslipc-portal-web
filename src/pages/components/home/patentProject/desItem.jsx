@@ -11,8 +11,10 @@ export default function DescItem({ isShowMask,data={光电领域: ["专利类型
 
         // background:
         //   "linear-gradient(270deg, #FFFFFF 0%, rgba(217,217,217,0) 85%)",
+        background:isShowMask?"url(/home/choose.png)":""
       }}
     >
+    
       {Object.keys(data)?.map((item,index) => {
         return (
           <div key={index} className="ml-20">
