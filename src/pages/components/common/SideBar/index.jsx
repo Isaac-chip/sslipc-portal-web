@@ -14,6 +14,11 @@ export default function SideBar({ sideBar, setComponent }) {
       setSideBarData((prev) => {
         const data = _.cloneDeep(prev);
         data[index].open = !data[index].open;
+        data.map((item,i)=>{
+          if(index!=i){
+            item.open=false
+          }
+        })
         return data;
       });
       setActivity((prev) => {
@@ -40,6 +45,7 @@ export default function SideBar({ sideBar, setComponent }) {
 
   }, []);
 
+
   return (
     <div className="flex">
       <div>
@@ -55,7 +61,7 @@ export default function SideBar({ sideBar, setComponent }) {
                 }
               }}
               className={classNames(
-                "h-72px w-210px flex justify-around items-center bg-white",
+                "h-72px w-210px flex justify-between px-2 items-center bg-white",
                 {
                   "text-white": menuActivity === index,
                 }

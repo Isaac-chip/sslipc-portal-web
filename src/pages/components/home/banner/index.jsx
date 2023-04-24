@@ -49,7 +49,7 @@ export default function Banner({}) {
         }}
         className={classNames(
           "w-full absolute top-0 z-10  bg-black ",
-          { "bg-opacity-50": isHovered },
+          { "bg-opacity-50 pb-8": isHovered },
           { "bg-opacity-10": !isHovered }
         )}
       >
