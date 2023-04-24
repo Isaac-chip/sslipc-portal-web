@@ -1,9 +1,7 @@
-
-
-export default function userCenterPage(){
-    return (
-        <>
-            usercenter
-        </>
-    )
+export default function userCenterPage() {
+  return (
+    <>
+      <div>userCenterPage</div>
+    </>
+  );
 }
