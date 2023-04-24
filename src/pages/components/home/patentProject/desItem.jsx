@@ -29,7 +29,9 @@ export default function DescItem({ isShowMask,data={光电领域: ["专利类型
                           { hidden: data[item]?.length === index + 1 }
                         )}
                       >
-                        |
+                        {
+                          data[item].length===subIndex+1?"":"|"
+                        }
                       </div>
                     </div>
                   );
