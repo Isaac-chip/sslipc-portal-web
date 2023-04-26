@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -35,10 +34,8 @@ export default function Banner({}) {
             />
           </SwiperSlide>
         </Swiper>
+        <ToolsBar></ToolsBar>
       </div>
-      <ToolsBar></ToolsBar>
-
-     
     </div>
   );
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from 'next/router'
 import Button from "./button";
 import ExpertCard from "./ExpertCard";
+import ToolsBar from "../common/ToolsBar";
 export default function Expert() {
   const count = 9;
   const router = useRouter()
@@ -31,6 +32,7 @@ export default function Expert() {
         })}
        
       </div>
+    
     </div>
   );
 }

@@ -40,6 +40,7 @@ export default function App({ Component, pageProps }) {
     >
       <div className={classNames({ hidden: !isShowRootComponent })}>
         <Header></Header>
+   
       </div>
       <div className="flex-grow"> 
       <Component {...pageProps} />
