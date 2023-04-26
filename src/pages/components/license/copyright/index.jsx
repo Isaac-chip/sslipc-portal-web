@@ -26,6 +26,158 @@ export default function Copyright() {
       ],
     },
   ];
+  const data = [
+    {
+      url:"/license/copyRight/111.png",
+      title:"安妮怎么了",
+      desc:"动漫作品",
+      price:"14080.00"
+    },
+    {
+      url:"/license/copyRight/112.png",
+      title:"宫锁沉香",
+      desc:"影视剧集",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/114.png",
+      title:"心肝宝贝",
+      desc:"影视剧集",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/115.png",
+      title:"《默》",
+      desc:"歌曲音乐",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/111.png",
+      title:"安妮怎么了",
+      desc:"动漫作品",
+      price:"14080.00"
+    },
+    {
+      url:"/license/copyRight/112.png",
+      title:"宫锁沉香",
+      desc:"影视剧集",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/111.png",
+      title:"安妮怎么了",
+      desc:"动漫作品",
+      price:"14080.00"
+    },
+    {
+      url:"/license/copyRight/112.png",
+      title:"宫锁沉香",
+      desc:"影视剧集",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/111.png",
+      title:"安妮怎么了",
+      desc:"动漫作品",
+      price:"14080.00"
+    },
+    {
+      url:"/license/copyRight/112.png",
+      title:"宫锁沉香",
+      desc:"影视剧集",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/111.png",
+      title:"安妮怎么了",
+      desc:"动漫作品",
+      price:"14080.00"
+    },
+    {
+      url:"/license/copyRight/112.png",
+      title:"宫锁沉香",
+      desc:"影视剧集",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+  ]
   return (
     <>
       <div className="mt-2">
@@ -42,10 +194,21 @@ export default function Copyright() {
         <SortButton text={"发布时间排序"}></SortButton>
         <SortButton text={"价格排序"}></SortButton>
       </div>
-
-      <CopyRightCard onClick={()=>router.push('/copyRightDetail?id=123')}></CopyRightCard>
+      <div className="grid grid-cols-5">
+      {
+        data?.map((item)=>{
+          return (
+           <div className="mb-4">
+             <CopyRightCard data={item} onClick={()=>router.push('/copyRightDetail?id=123')}></CopyRightCard>
+           </div>
+          )
+        })
+      }
+      </div>
+     
+     
      <div className="mt-70px mb-95px">
-        <PaginationPlus></PaginationPlus>
+        {/* <PaginationPlus></PaginationPlus> */}
      </div>
     </>
   );

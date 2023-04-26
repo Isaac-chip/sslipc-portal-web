@@ -1,4 +1,6 @@
-export default function Card({onClick}) {
+import classNames from "classnames";
+export default function Card({onClick,data}) {
+    const {url,title,desc,price,subTitle,labelFlag} = data
     return (
       <>
         <div
@@ -12,14 +14,14 @@ export default function Card({onClick}) {
         >
           <img
             className="w-222px h-180px"
-            src="https://ts1.cn.mm.bing.net/th?id=ORMS.489733b3df8049dd11021dfab850925e&pid=Wdp&w=300&h=156&qlt=90&c=1&rs=1&dpr=1&p=0"
+            src={url}
             alt=""
             srcset=""
           />
           <div className="flex items-center mt-2 justify-between">
-            <div className="font-bold text-xl">唐匠布乙</div>
+            <div className="font-bold text-xl">{title}</div>
             <div
-              className="w-54px text-sm px-2 py-1 box-border"
+              className={classNames("w-54px text-sm px-2 py-1 box-border",{"hidden":!labelFlag})}
               style={{
                 borderRadius: "2px 2px 2px 2px",
                 opacity: "1",
@@ -31,16 +33,16 @@ export default function Card({onClick}) {
             </div>
           </div>
           <p className="text-16px mt-2" style={{ color: "#565656" }}>
-            第24类 布料床单
+           {subTitle} 
           </p>
           <p
             className="mt-2 text-14px line-clamp-2 overflow-hidden leading-5"
             style={{ color: "#818181" }}
           >
-            丝绸（布料）,布,织物,无纺布,卸妆用布,丝绸（布料）,布,织物,无纺布,卸妆用布,丝绸（布料）,布,织物,无纺布,卸妆用布,丝绸（布料）,布,织物,无纺布,卸妆用布,
+            {desc}
           </p>
           <div className="mt-3 flex justify-between items-center">
-            <div className="text-xxl font-bold" style={{color:"#FF0000"}}>￥14080.00</div>
+            <div className="text-xxl font-bold" style={{color:"#FF0000"}}>￥{price}</div>
             <img className="w-26px h-23px" src="/icon/talk.png" alt="" srcset="" />
           </div>
         </div>
