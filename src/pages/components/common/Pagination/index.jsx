@@ -1,4 +1,5 @@
 import { Tabs, Pagination } from "flowbite-react";
+
 export default function PaginationPlus() {
   return (
     <div className="flex items-center justify-center text-center">
@@ -28,7 +29,8 @@ export default function PaginationPlus() {
           },
         }}
         currentPage={1}
-        totalPages={2}
+        totalPages={1}
+        layout="pagination"
         onPageChange={()=>{}}
         previousLabel="上一页"
         nextLabel="下一页"

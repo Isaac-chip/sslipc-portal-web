@@ -23,7 +23,7 @@ export default function CopyRightCard({onClick,className}) {
           动漫作品
         </p>
         <div className="mt-10 flex justify-between items-center">
-          <div className="text-red-700 text-16 font-bold">￥面议</div>
+          <div className="text-xxl font-bold" style={{color:"#FF0000"}}>￥面议</div>
           <img className="w-26px h-23px" src="/icon/talk.png" alt="" srcset="" />
         </div>
       </div>

@@ -17,14 +17,22 @@ export default function PublicService() {
     { label: "最新公告", content: <div>
       {
         new Array(10).fill("")?.map((item)=>{
-          return <Card onClick={()=>router.push('/newsDetail?id=111')}></Card> 
+          return (
+            <div className="mt-24px mb-24px">
+              <Card onClick={()=>router.push('/newsDetail?id=111')}></Card> 
+            </div>
+          )
         })
       }
     </div> },
     { label: "行业资讯", content: <div>
     {
       new Array(10).fill("")?.map((item)=>{
-        return <Card onClick={()=>router.push('/newsDetail?id=111')}></Card> 
+        return (
+          <div className="mt-24px mb-24px">
+            <Card onClick={()=>router.push('/newsDetail?id=111')}></Card> 
+          </div>
+        )
       })
     }
   </div>  },

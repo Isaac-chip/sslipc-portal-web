@@ -46,7 +46,7 @@ export default function PatentContent() {
       ],
     },
   ];
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className="flex">
       <div className="flex-grow">
@@ -77,11 +77,17 @@ export default function PatentContent() {
         </div>
         <div className="mt-10">
           {new Array(10).fill("")?.map((item) => {
-            return <Card onClick={()=>router.push('/patentDetail?id=123')} className={"mb-6"}></Card>;
+            return (
+              <Card
+                onClick={() => router.push("/patentDetail?id=123")}
+                className={"mb-6"}
+              ></Card>
+            );
           })}
         </div>
-
-        <PaginationPlus></PaginationPlus>
+        <div className="mb-4">
+          <PaginationPlus></PaginationPlus>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export default function ExpertCard() {
         <p className="font-bold text-xxl mt-10px">金翔龙</p>
         <p className="text-sm text-gray-400">JIN XIANG LONG</p>
         <p className="text-md font-normal mt-11px">中国工程院院士</p>
-        <p className="mt-6px">中国著名海洋地质与地球物理学家中国海底科学奠基人之一</p>
+        <p className="mt-6px leading-7">中国著名海洋地质与地球物理学家中国海底科学奠基人之一</p>
         <div className="flex items-center mt-19px">
           <div className="font-bold text-md text-blue">查看更多</div>
           <img className="" src="/expert/right.png" alt="" srcset="" />

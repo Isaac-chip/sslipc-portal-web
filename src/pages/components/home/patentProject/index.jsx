@@ -6,12 +6,12 @@ export default function PatentProject() {
   return ( 
     <div
       className="w-full mt-60px h-full"
-      
+      style={{ background: "url(/patentProject/bg2.png)" }}
     >
-      <div className="container mx-auto h-full xs:h-screen px-6" style={{ background: "url(/patentProject/bg2.png)" }}>
-        <div className="pt-20px">
+      <div className="container mx-auto h-full xs:h-screen px-6" >
+        <div className="pt-40px">
           <IntroTitle
-            className="pt-20px"
+            
             textColor="text-white"
             title={"推荐专利项目"}
             desc=" Recommended Patent Projects"

@@ -24,7 +24,17 @@ export default function PolicyInfoPage() {
         </div>
       ),
     },
-    { label: "指导性文件", content: <div>Content for Tab 2</div> },
+    { label: "指导性文件", content: (
+      <div className="relative">
+        <div>
+          {new Array(10).fill("")?.map((item) => {
+            return <Card></Card>;
+          })}
+        </div>
+        <div className="h-full w-2px bg-gray-400 absolute top-0 -l-19px"></div>  
+       
+      </div>
+    ) },
   ];
   return (
     <div className="container mx-auto">

@@ -40,7 +40,7 @@ export default function Card({onClick}) {
             丝绸（布料）,布,织物,无纺布,卸妆用布,丝绸（布料）,布,织物,无纺布,卸妆用布,丝绸（布料）,布,织物,无纺布,卸妆用布,丝绸（布料）,布,织物,无纺布,卸妆用布,
           </p>
           <div className="mt-3 flex justify-between items-center">
-            <div className="text-red-700">￥14080.00</div>
+            <div className="text-xxl font-bold" style={{color:"#FF0000"}}>￥14080.00</div>
             <img className="w-26px h-23px" src="/icon/talk.png" alt="" srcset="" />
           </div>
         </div>

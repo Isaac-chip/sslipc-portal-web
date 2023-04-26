@@ -3,12 +3,15 @@ export default function Card({onClick}) {
     <div onClick={onClick} className="cursor-pointer flex justify-between pb-10 border-b-2" style={{borderBottom:"1px solid #F0F3F7"}}>
       <div className="flex relative container">
         <img
-          className="w-400px sm:w-4/12 h-full shadow-2xl"
+          className="w-249px h-160px"
           src="https://ts2.cn.mm.bing.net/th?id=ORMS.f493b8d02a263aa14f115f7a5895ca13&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=2&p=0"
           alt=""
           srcset=""
+          style={{
+            boxShadow: "4px 4px 4px 0px rgba(122,122,122,0.25)"
+          }}
         />
-        <div className="relative">
+        <div className="relative" style={{height:"160px"}}>
           <p className="pl-2  overflow-hidden truncate font-bold w-3/12 text-sm sm:w-2/12 md:w-3/12 lg:w-4/12 xl:w-6/12 sm:text-xl">
             再添新站点|集聚区第六个知识产权服务站点落户智汇蓝海再添新站点|集聚区第六个知识产权服务站点落户智汇蓝海
           </p>
