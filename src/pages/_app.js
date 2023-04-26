@@ -6,6 +6,7 @@ import classNames from "classnames";
 
 import Header from "./components/common/Header/index";
 import Footer from "./components/common/Footer";
+import ToolsBar from "./components/common/ToolsBar";
 
 export default function App({ Component, pageProps }) {
   const [isShowRootComponent, setIsShowRootComponent] = useState(true);
@@ -42,6 +43,18 @@ export default function App({ Component, pageProps }) {
         <Header></Header>
    
       </div>
+      {
+        isShowRootComponent && router.pathname!="/" && (
+          <div className="relative" style={{background:"#F0F3F7",minHeight:"70px"}}>
+          <ToolsBar theme={{
+              toolsBar:{
+                  base:"w-full hover:bg-gray-200 hover:h-80  absolute z-50"
+              }
+          }}></ToolsBar>
+        </div>
+        )
+      }
+   
       <div className="flex-grow"> 
       <Component {...pageProps} />
       </div>
