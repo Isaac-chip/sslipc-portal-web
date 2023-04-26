@@ -1,5 +1,8 @@
 import classNames from "classnames";
 export default function Card({className,onClick,data}) {
+  if(!data){
+    return null
+  }
   const {url,title,desc} = data
   return (
     <div onClick={onClick} className={classNames("flex pb-29px border-b border-gray-200",className)}>

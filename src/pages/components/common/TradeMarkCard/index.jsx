@@ -1,5 +1,8 @@
 import classNames from "classnames";
 export default function Card({onClick,data}) {
+  if(!data){
+    return null
+  }
     const {url,title,desc,price,subTitle,labelFlag} = data
     return (
       <>

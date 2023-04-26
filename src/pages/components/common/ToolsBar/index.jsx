@@ -1,14 +1,49 @@
 import Link from "next/link";
 import { useState } from "react";
 import classNames from "classnames";
-import mergeDeep from "@/pages/helpers/mergeDeep.js";
-import { defaultThem } from "./default";
+
+
 import { fakeData } from "@/constants";
 export default function ToolsBar({ theme = {}, className }) {
   const [isHovered, setIsHovered] = useState(false);
   const [Data, setData] = useState(fakeData);
+  const defaultThem = {
+    toolsBar: {
+      base: " text-white hover:h-80 bg-opacity-10 hover:bg-opacity-50 w-full absolute top-0 z-10  bg-black",
+    },
+  };
+ 
+  const mergeDeep = (target, source) => {
+    function isObject(item) {
+      return item && typeof item === "object" && !Array.isArray(item);
+    }
+
+    function cloneDeep(obj) {
+      return JSON.parse(JSON.stringify(obj));
+    }
+
+    if (isObject(source) && Object.keys(source).length === 0) {
+      return cloneDeep({ ...target, ...source });
+    }
+
+    const output = { ...target, ...source };
+
+    if (isObject(source) && isObject(target)) {
+      Object.keys(source).forEach((key) => {
+        if (isObject(source[key]) && key in target && isObject(target[key])) {
+          output[key] = mergeDeep(target[key], source[key]);
+        } else {
+          output[key] = isObject(source[key])
+            ? cloneDeep(source[key])
+            : source[key];
+        }
+      });
+    }
+
+    return output;
+  };
   const customTheme = mergeDeep(defaultThem, theme !== undefined ? theme : {});
-  console.log(customTheme);
+
   return (
     <div
       onMouseEnter={() => {
@@ -17,7 +52,7 @@ export default function ToolsBar({ theme = {}, className }) {
       onMouseLeave={(e) => {
         setIsHovered(false);
       }}
-      className={classNames(customTheme.toolsBar.base, className)}
+      className={classNames(customTheme?.toolsBar?.base, className)}
     >
       <div className="container  mx-auto hidden md:block">
         <ul
@@ -34,11 +69,8 @@ export default function ToolsBar({ theme = {}, className }) {
                 key={item + index}
                 className="hover:text-yellow min-w-1/7 truncate "
               >
-                <Link
-                  target={"_blank"}
-                  href={'/'}
-                >
-                 {item}
+                <Link target={"_blank"} href={"/"}>
+                  {item}
                 </Link>
               </li>
             ) : (
