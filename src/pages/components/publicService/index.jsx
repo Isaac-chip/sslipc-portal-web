@@ -52,7 +52,7 @@ export default function PublicService() {
           tabs={tabs}
         ></TabsPlus>
         <div className="mb-20px">
-          <PaginationPlus></PaginationPlus>
+          {/* <PaginationPlus></PaginationPlus> */}
         </div>
       </div>
     </div>
