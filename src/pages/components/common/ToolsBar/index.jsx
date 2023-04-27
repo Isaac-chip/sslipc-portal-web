@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import { useState } from "react";
 import classNames from "classnames";
-
 
 import { fakeData } from "@/constants";
 export default function ToolsBar({ theme = {}, className }) {
@@ -12,7 +12,7 @@ export default function ToolsBar({ theme = {}, className }) {
       base: " text-white hover:h-80 bg-opacity-10 hover:bg-opacity-50 w-full absolute top-0 z-10  bg-black",
     },
   };
- 
+
   const mergeDeep = (target, source) => {
     function isObject(item) {
       return item && typeof item === "object" && !Array.isArray(item);
@@ -44,6 +44,7 @@ export default function ToolsBar({ theme = {}, className }) {
   };
   const customTheme = mergeDeep(defaultThem, theme !== undefined ? theme : {});
 
+
   return (
     <div
       onMouseEnter={() => {
@@ -52,7 +53,7 @@ export default function ToolsBar({ theme = {}, className }) {
       onMouseLeave={(e) => {
         setIsHovered(false);
       }}
-      className={classNames(customTheme?.toolsBar?.base, className)}
+      className={classNames(customTheme?.toolsBar?.base, className,{"hover:h-auto":!isHovered})}
     >
       <div className="container  mx-auto hidden md:block">
         <ul
@@ -104,6 +105,7 @@ export default function ToolsBar({ theme = {}, className }) {
               {Data[item]?.map((subItem) => {
                 return (
                   <li
+                    onClick={()=>setIsHovered(false)}
                     onMouseEnter={() => {
                       setIsHovered(true);
                       console.log("123");
