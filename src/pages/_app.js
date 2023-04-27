@@ -8,6 +8,8 @@ import Header from "./components/common/Header/index";
 import Footer from "./components/common/Footer";
 import ToolsBar from "./components/common/ToolsBar";
 
+
+
 export default function App({ Component, pageProps }) {
   const [isShowRootComponent, setIsShowRootComponent] = useState(true);
   const router = useRouter();
@@ -39,6 +41,7 @@ export default function App({ Component, pageProps }) {
           : "#F9F9F9",
       }}
     >
+   
       <div className={classNames({ hidden: !isShowRootComponent })}>
         <Header></Header>
    
