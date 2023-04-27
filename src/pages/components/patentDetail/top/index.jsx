@@ -17,7 +17,7 @@ export default function Top() {
             boxShadow: " 4px 4px 4px 0px rgba(122,122,122,0.25)",
           }}
         />
-        <div className="ml-4 w-800px">
+        <div className="ml-4 w-full pr-20px">
           <div className="flex items-center justify-between">
             <p className="font-bold text-xl">
               胃癌术后严重并发症风险度的预测方法
