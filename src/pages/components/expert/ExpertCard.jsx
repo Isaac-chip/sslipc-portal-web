@@ -1,5 +1,4 @@
-import { Card } from "flowbite-react";
-import Image from "next/image";
+
 export default function ExpertCard({data}) {
   if(!data){
     return null
@@ -16,9 +15,7 @@ export default function ExpertCard({data}) {
               <p className="leading-7">{item}</p>
             )
           })
-        }
-        {/* <p className="text-md font-normal mt-11px">中国工程院院士</p> */}
-        
+        }        
         <div className="flex items-center mt-19px">
           <div className="font-bold text-md text-blue">查看更多</div>
           <img className="" src="/expert/right.png" alt="" srcset="" />
