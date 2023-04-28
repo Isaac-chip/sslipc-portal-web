@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import classNames from "classnames";
 
+
 import { fakeData } from "@/constants";
 export default function ToolsBar({ theme = {}, className }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -108,7 +109,6 @@ export default function ToolsBar({ theme = {}, className }) {
                     onClick={()=>setIsHovered(false)}
                     onMouseEnter={() => {
                       setIsHovered(true);
-                      console.log("123");
                     }}
                     key={item + index + "-" + subItem.label}
                     className="hover:text-yellow  pt-30px w-200px"

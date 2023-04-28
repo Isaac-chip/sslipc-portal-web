@@ -7,6 +7,33 @@ export default function expertDetailPage() {
   const handleTabChange = (index) => {
     setActiveTab(index);
   };
+  const data = [
+    {
+      url:"/expert/people2.png",
+      name:"王艳红",
+      EnglishName:"WANG YAN HONG",
+      desc:["东莞铭普光磁股份有限公司总监","助理研究员（中级）","从事知识产权工作12年"]
+    },
+    {
+      url:"/expert/people.png",
+      name:"付光耀",
+      EnglishName:"FU GUANG YAO",
+      desc:["电子科技大学工学硕士","广东君逸律师事务所执业律师","专利代理师"]
+    },
+    {
+      url:"/expert/people3.png",
+      name:"杨良滔",
+      EnglishName:"YANG LIANG TAO",
+      desc:["脑机接/先进电极材料及设计","电化学技术在生物及储能领域方面的应用研究"]
+    },
+    {
+      url:"/expert/people4.png",
+      name:"胡拥军",
+      EnglishName:"HU YONG JUN",
+      desc:["广东聚创智合知识产权代理有限公司总经理","从事知识产权工作 17 年"]
+    },
+  
+  ]
 
   const tabs = [
     {
@@ -14,10 +41,10 @@ export default function expertDetailPage() {
       content: (
         <div className="relative">
           <div className="grid grid-cols-4 gap-4">
-            {new Array(10).fill("")?.map((item) => {
+            {data?.map((item) => {
               return (
                 <div className="mb-30px">
-                  <ExpertCard></ExpertCard>
+                  <ExpertCard data={item}></ExpertCard>
                 </div>
               );
             })}
@@ -39,8 +66,8 @@ export default function expertDetailPage() {
         style={{ background: "#F7F7F8" }}
       >
         <img
-          className="w-240px h-300px flex-shrink-0 bg-black"
-          src=""
+          className="w-240px h-300px flex-shrink-0 "
+          src="/expert/people.png"
           alt=""
           srcset=""
         />
