@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 
 import { fakeData } from "@/constants";
-export default function ToolsBar({ theme = {}, className }) {
+export default function ToolsBar({ theme = {}, className,openTabType="_blank" }) {
   const [isHovered, setIsHovered] = useState(false);
   const [Data, setData] = useState(fakeData);
   const defaultThem = {
@@ -44,7 +44,9 @@ export default function ToolsBar({ theme = {}, className }) {
     return output;
   };
   const customTheme = mergeDeep(defaultThem, theme !== undefined ? theme : {});
-
+  useEffect(()=>{
+    console.log(openTabType)
+  },[openTabType])
 
   return (
     <div
@@ -71,7 +73,7 @@ export default function ToolsBar({ theme = {}, className }) {
                 key={item + index}
                 className="hover:text-yellow min-w-1/7 truncate "
               >
-                <Link target={"_blank"} href={"/"}>
+                <Link target={openTabType} href={"/"}>
                   {item}
                 </Link>
               </li>
@@ -114,7 +116,7 @@ export default function ToolsBar({ theme = {}, className }) {
                     className="hover:text-yellow  pt-30px w-200px"
                   >
                     <Link
-                      target={subItem?.target || "_blank"}
+                      target={openTabType}
                       href={subItem.router}
                     >
                       {subItem.label}

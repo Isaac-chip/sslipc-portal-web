@@ -13,6 +13,7 @@ import ToolsBar from "./components/common/ToolsBar";
 export default function App({ Component, pageProps }) {
   const [isShowRootComponent, setIsShowRootComponent] = useState(true);
   const router = useRouter();
+  const [openTabType,setOpenTabType] = useState(null)
 
   useEffect(() => {
     console.log(router.pathname);
@@ -21,7 +22,13 @@ export default function App({ Component, pageProps }) {
     } else {
       setIsShowRootComponent(true);
     }
+    if(router.pathname=='/'){
+      setOpenTabType("_blank")
+    }else {
+      setOpenTabType("_self")
+    }
   }, [router.pathname]);
+
   const pageBgColorList = {
     "/expertDetail": "#FFFFFF",
     "/expert": "#FFFFFF",
@@ -30,6 +37,7 @@ export default function App({ Component, pageProps }) {
     "/login": "#FFFFFF",
   
   };
+
   return (
     <div
       className={classNames(
@@ -43,13 +51,15 @@ export default function App({ Component, pageProps }) {
     >
    
       <div className={classNames({ hidden: !isShowRootComponent })}>
-        <Header></Header>
+        <Header ></Header>
    
       </div>
       {
         isShowRootComponent && router.pathname!="/" && (
           <div className="relative" style={{background:"#F0F3F7",minHeight:"70px"}}>
-          <ToolsBar theme={{
+          <ToolsBar
+          openTabType={openTabType}
+          theme={{
               toolsBar:{
                   base:"w-full hover:bg-gray-200 hover:h-80  absolute z-50"
               }
