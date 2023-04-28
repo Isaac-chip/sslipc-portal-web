@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
+
 import CopyRightCard from "../common/CopyRightCard";
 import TradeMarkCard from "../common/TradeMarkCard";
 import PatentDetailCard from "../patentDetail/card";
 
 export default function ProjectArea() {
+  const router = useRouter()
   return (
     <>
       <div className="grid grid-cols-5 gap-4 ">
@@ -35,7 +38,8 @@ export default function ProjectArea() {
             desc: "本发明公开一种多能源多电机液压挖掘机电液混合驱动系统及控制方法。该系统包括动力电池、超级电容、能量管理单元、动力电机、电机控制器、先导操作手柄、液压蓄能器、油箱、液压泵/马达、多个电磁换向阀、多个压力传感器、溢流阀、开中心六通比例方向...",
           },
         ]?.map((item) => {
-          return <PatentDetailCard data={item}></PatentDetailCard>;
+                  
+          return  <PatentDetailCard data={item}></PatentDetailCard>;
         })}
       </div>
       <div className="grid grid-cols-5 gap-4 mb-5">
@@ -79,7 +83,7 @@ export default function ProjectArea() {
             labelFlag: false,
           },
         ]?.map((item) => {
-          return <TradeMarkCard data={item}></TradeMarkCard>;
+          return <TradeMarkCard onClick={()=>router.push("tradeMarkDetail?id=123")} data={item}></TradeMarkCard>;
         })}
       </div>
       <div className="grid grid-cols-5 gap-4 mb-5">
@@ -116,7 +120,7 @@ export default function ProjectArea() {
           },
           
         ].map((item) => {
-          return <CopyRightCard data={item}></CopyRightCard>;
+          return <CopyRightCard onClick={()=>router.push("copyRightDetail?id=123")}  data={item}></CopyRightCard>;
         })}
       </div>
     </>

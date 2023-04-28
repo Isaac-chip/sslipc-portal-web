@@ -5,7 +5,7 @@ export default function TitleCard() {
         <div className="w-290px h-230px bg-black">
           <img
             className="w-full h-full"
-            src="https://www.bing.com/th?id=OVFT.pqaa6XQZhATd2mUMrvnY1C&pid=News&w=120&h=80&c=14&rs=2&qlt=90"
+            src="/license/copyRight/113.png"
             alt=""
             srcset=""
           />

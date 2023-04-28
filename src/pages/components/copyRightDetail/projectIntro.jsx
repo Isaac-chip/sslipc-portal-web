@@ -1,6 +1,32 @@
 import TabsPlus from "../common/TabsPlus";
 import CopyRightCard from "../common/CopyRightCard";
 export default function ProjectIntro() {
+  const data = [
+    {
+      url:"/license/copyRight/111.png",
+      title:"安妮怎么了",
+      desc:"动漫作品",
+      price:"14080.00"
+    },
+    {
+      url:"/license/copyRight/112.png",
+      title:"宫锁沉香",
+      desc:"影视剧集",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/113.png",
+      title:"《宝石山-洞穴里的怪女孩》",
+      desc:"艺术创作",
+      price:"面议"
+    },
+    {
+      url:"/license/copyRight/114.png",
+      title:"心肝宝贝",
+      desc:"影视剧集",
+      price:"面议"
+    },
+  ]
   const tabs = [
     {
       tab: [
@@ -46,9 +72,10 @@ export default function ProjectIntro() {
                   flexWrap: "nowrap",
                 }}
               >
-                {new Array(10).fill("")?.map((item) => {
+                {new Array(4).fill("")?.map((item) => {
                   return (
                     <img
+                    src="/license/copyRight/113.png"
                       className="w-290px h-230px bg-black mr-2 mb-4"
                       style={{ flex: "0 0 auto" }}
                     />
@@ -75,10 +102,10 @@ export default function ProjectIntro() {
                     flexWrap: "nowrap",
                   }}
                 >
-                  {new Array(10).fill("")?.map((item) => {
+                  {data?.map((item) => {
                     return (
                         <div className="w-240px ml-2 mb-2">
-                             <CopyRightCard></CopyRightCard>
+                             <CopyRightCard data={item}></CopyRightCard>
                         </div>
                        
                     );

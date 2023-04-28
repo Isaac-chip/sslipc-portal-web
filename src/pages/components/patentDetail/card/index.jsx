@@ -1,10 +1,13 @@
+import { useRouter } from "next/router";
 export default function Card({data}) {
   if(!data){
     return null
   }
+  const router = useRouter()
   const {url,title,desc} = data
   return (
     <div
+      onClick={()=>router.push("/patentDetail?id=123")}
       className="w-240px mb-20px h-308px box-border px-2 pt-2 relative mr-2"
       style={{
         background: "#F8FBFF",

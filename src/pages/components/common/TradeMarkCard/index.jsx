@@ -1,9 +1,11 @@
 import classNames from "classnames";
+import { useRouter } from "next/router";
 export default function Card({onClick,data}) {
   if(!data){
     return null
   }
     const {url,title,desc,price,subTitle,labelFlag} = data
+    const router = useRouter()
     return (
       <>
         <div

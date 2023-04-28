@@ -3,6 +3,40 @@ import TabsPlus from "../common/TabsPlus";
 import Table from "../common/Table";
 import Card from "../common/TradeMarkCard";
 export default function TradeMarkDetail() {
+  const data = [
+     {
+      url:"/license/tradeMark/11.png",
+      title:"鼎牧臣",
+      subTitle:"第43类 餐饮住宿",
+      desc:"住所代理（旅馆、供膳寄宿处）,养老院,咖啡馆,餐厅,日...",
+      price:"12300.00",
+      labelFlag:true
+    },
+    {
+      url:"/license/tradeMark/12.png",
+      title:"秦面师",
+      subTitle:"第43类 餐饮住宿",
+      desc:"住所代理（旅馆、供膳寄宿处）,养老院,咖啡馆,餐厅,旅...",
+      price:"98000.00",
+      labelFlag:true
+    },
+    {
+      url:"/license/tradeMark/13.png",
+      title:"福茶倌",
+      subTitle:"第43类 餐饮住宿",
+      desc:"住所代理（旅馆、供膳寄宿处）,养老院,咖啡馆,餐厅,旅...",
+      price:"158880.00",
+      labelFlag:true
+    },
+    {
+      url:"/license/tradeMark/14.png",
+      title:"酸魔仙",
+      subTitle:"第30类 方便食品",
+      desc:"蛋糕,茶,调味品,蜂蜜,比萨饼,米,果冻（糖果）,麦乳精,方便面...",
+      price:"82800.00",
+      labelFlag:false
+    },
+  ]
   const tabs = [
     {
       tab: [
@@ -143,10 +177,10 @@ export default function TradeMarkDetail() {
                 flexWrap: "nowrap",
               }}
             >
-              {new Array(10).fill("")?.map((item) => {
+              {data?.map((item) => {
                 return (
                     <div className="w-240px ml-2 mb-2">
-                         <Card></Card>
+                         <Card data={item}></Card>
                     </div>
                    
                 );

@@ -227,9 +227,10 @@ export default function Financial() {
                 boxShadow: "0px 0px 4px 4px rgba(195,195,195,0.15)",
                 borderRadius: " 0px 0px 0px 0px",
                 opacity: 1,
+                background:"url(/financial/dongguan.png)"
               }}
             >
-              1
+        
             </div>
             <div
               className="ml-0 sm:ml-28 "
@@ -239,6 +240,7 @@ export default function Financial() {
                 boxShadow: "0px 0px 4px 4px rgba(195,195,195,0.15)",
                 borderRadius: "0px 0px 0px 0px",
                 opacity: 1,
+                background:"url(/financial/jianshe.png)"
               }}
             ></div>
           </div>
