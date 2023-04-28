@@ -227,7 +227,9 @@ export default function Financial() {
                 boxShadow: "0px 0px 4px 4px rgba(195,195,195,0.15)",
                 borderRadius: " 0px 0px 0px 0px",
                 opacity: 1,
-                background:"url(/financial/dongguan.png)"
+                background:"url(/financial/dongguan.png)",
+                backgroundSize: "cover",
+                backgroundRepeat: 'no-repeat'
               }}
             >
         
@@ -240,7 +242,9 @@ export default function Financial() {
                 boxShadow: "0px 0px 4px 4px rgba(195,195,195,0.15)",
                 borderRadius: "0px 0px 0px 0px",
                 opacity: 1,
-                background:"url(/financial/jianshe.png)"
+                background:"url(/financial/jianshe.png)",
+                backgroundSize: "cover",
+                backgroundRepeat: 'no-repeat'
               }}
             ></div>
           </div>
