@@ -1,4 +1,3 @@
-import ToolsBar from "./components/common/ToolsBar"
 import ProjectArea from "./components/projectArea"
 
 export default function ProjectAreaPage(){
