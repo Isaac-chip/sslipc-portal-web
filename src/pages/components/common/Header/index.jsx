@@ -22,7 +22,7 @@ export default function Index() {
       <div className="container mx-auto">
       <Navbar className="justify-around" fluid={true} rounded={true}>
         <Navbar.Brand href="/">
-          <Image src="/LOGO.png" alt="me" width="294" height="49" />
+          <Image src="/LOGO@2x.png" alt="me" width="294" height="49" />
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
