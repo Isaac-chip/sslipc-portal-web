@@ -10,7 +10,7 @@ export default function ToolsBar({ theme = {}, className,openTabType="_blank" })
   const [Data, setData] = useState(fakeData);
   const defaultThem = {
     toolsBar: {
-      base: " text-white hover:h-80 bg-opacity-10 hover:bg-opacity-50 w-full absolute top-0 z-10  bg-black",
+      base: " text-white hover:h-96 bg-opacity-10 hover:bg-opacity-50 w-full absolute top-0 z-10  bg-black",
     },
   };
 
@@ -93,7 +93,7 @@ export default function ToolsBar({ theme = {}, className,openTabType="_blank" })
           setIsHovered(false);
         }}
         className={classNames(
-          "absolute left-2/4 -translate-x-2/4 flex container mx-auto pt-8px ",
+          "absolute left-2/4 -translate-x-2/4 flex container mx-auto pt-8px justify-around",
           {
             hidden: !isHovered,
           }
@@ -113,7 +113,7 @@ export default function ToolsBar({ theme = {}, className,openTabType="_blank" })
                       setIsHovered(true);
                     }}
                     key={item + index + "-" + subItem.label}
-                    className="hover:text-yellow  pt-30px w-200px"
+                    className="hover:text-yellow  pt-30px min-w-1/7 "
                   >
                     <Link
                       target={openTabType}

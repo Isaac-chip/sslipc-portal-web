@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }) {
           openTabType={openTabType}
           theme={{
               toolsBar:{
-                  base:"w-full hover:bg-gray-200 hover:h-80  absolute z-50"
+                  base:"w-full hover:bg-gray-200 hover:h-96  absolute z-50"
               }
           }}></ToolsBar>
         </div>

@@ -12,7 +12,7 @@ export default function RightsFlow() {
       children: [
         {
           label: "维权援助流程",
-          component: <img className="mx-auto" src="/rightFlow/process.png"></img>,
+          component: <img className="mx-auto" src="/rightFlow/zhuanli@2x.png"></img>,
         },
         {
           label: "人民调解流程",
