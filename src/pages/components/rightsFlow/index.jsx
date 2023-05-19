@@ -11,11 +11,11 @@ export default function RightsFlow() {
       children: [
         {
           label: "维权援助流程",
-          component: <img className="mx-auto" src="/rightFlow/zhuanli@2x.png"></img>,
+          component: <img className="mx-auto" src="/rightFlow/weiquan@2x.png"></img>,
         },
         {
           label: "人民调解流程",
-          component: <img className="mx-auto" src="/rightFlow/flow1.jpg"></img>,
+          component: <img className="mx-auto" src="/rightFlow/zhuanli@2x.png"></img>,
         },
         // { label: "仲裁调解流程" },
         // { label: "专利侵权纠纷提交材料" },
@@ -1077,6 +1077,17 @@ export default function RightsFlow() {
         ) },
       ],
       open: false,
+    },
+    {
+      label: "国家海外知识产权 纠纷应对指导",
+      children: [],
+      open: false,
+      component:(
+        <div>
+          <img className="w-full" src="/rightFlow/ipweiquan@2x.png" alt="" srcset="" />
+        
+        </div>
+      )
     },
     {
       label: "维权工具",
