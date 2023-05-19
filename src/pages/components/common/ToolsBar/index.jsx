@@ -56,7 +56,7 @@ export default function ToolsBar({ theme = {}, className,openTabType="_blank" })
       onMouseLeave={(e) => {
         setIsHovered(false);
       }}
-      className={classNames(customTheme?.toolsBar?.base, className,{"hover:h-auto":!isHovered})}
+      className={classNames(customTheme?.toolsBar?.base, className,{"hover:h-auto hover:h-0":!isHovered})}
     >
       <div className="container  mx-auto hidden md:block">
         <ul
