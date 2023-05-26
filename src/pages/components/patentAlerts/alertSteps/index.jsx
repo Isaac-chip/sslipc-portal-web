@@ -6,7 +6,7 @@ import StepsButton from "../../common/Steps/stepsButton";
 export default function AlertSteps() {
  const [step,setStep] = useState(1)
   return (
-    <div>
+    <div className="bg-white">
       {
         step==1 && <Step1></Step1>
       }
