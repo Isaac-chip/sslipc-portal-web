@@ -1084,8 +1084,7 @@ export default function RightsFlow() {
       open: false,
       component:(
         <div>
-          <img className="w-full" src="/rightFlow/ipweiquan@2x.png" alt="" srcset="" />
-        
+          <img className="w-full" src="/rightFlow/ipweiquan@2x.png" alt="" srcset="" /> 
         </div>
       )
     },

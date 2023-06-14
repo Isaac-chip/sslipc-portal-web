@@ -1,6 +1,8 @@
 import Summary from "./components/financial/summary";
 import classNames from "classnames";
+import { useRouter } from "next/router";
 export default function securitizationPage() {
+  const router = useRouter()
   return (
     <>
       <img
@@ -150,7 +152,7 @@ export default function securitizationPage() {
           bgImg="/securitization/RZSQ@2x.png"
           titleImg="/securitization/rongzi@2x.png"
         >
-            <img className="py-2" src="/securitization/click@2x.png" alt="" srcset="" />
+            <img onClick={()=>{router.push('/financingForm')}} className="py-2 cursor-pointer" src="/securitization/click@2x.png" alt="" srcset="" />
             <p className="text-xl pt-2 pb-8">联系我们：0769-26990216</p>
         </Summary>
       </div>
