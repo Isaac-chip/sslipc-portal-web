@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import CustomInput from "./components/common/Input";
+import VerifyInput from "./components/common/verifyInput";
 import { Checkbox, Label } from "flowbite-react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import TextArea from "./components/common/TexTArea";
@@ -33,72 +34,12 @@ export default function financingFormPage() {
               基础信息
             </p>
             <div className="flex flex-wrap justify-between">
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span>
-                    企业名称
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                </div>
-              </div>
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span>
-                    企社会统一信用代码
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                </div>
-              </div>
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span>
-                    企业负责人
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                </div>
-              </div>
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span>
-                    企业名称
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                </div>
-              </div>
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    {/* <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span> */}
-                    负责人职位
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                </div>
-              </div>
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    {/* <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span> */}
-                    通讯地址
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                </div>
-              </div>
+              <VerifyInput label="企业名称"></VerifyInput>
+              <VerifyInput label="企社会统一信用代码"></VerifyInput>
+              <VerifyInput label="企业负责人"></VerifyInput>
+              <VerifyInput label="企业名称"></VerifyInput> 
+              <VerifyInput verify={false} label="负责人职位"></VerifyInput>  
+              <VerifyInput verify={false} label="通讯地址"></VerifyInput>          
             </div>
           </div>
         </div>
@@ -142,31 +83,10 @@ export default function financingFormPage() {
               </div>
             </div>
             <div className="flex flex-wrap justify-between">
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span>
-                    经济规模
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                  <p className="absolute -inset-y-1/2 translate-y-1/2 right-4">
-                    万元
-                  </p>
-                </div>
-              </div>
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    {/* <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span> */}
-                    人员规模
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                </div>
-              </div>
+           
+              <VerifyInput label="经济规模" unit={"万元"}></VerifyInput> 
+        
+              <VerifyInput label="人员规模" verify={false}></VerifyInput> 
               <div className="relative w-5/12">
                 <div className="flex mt-4 justify-end">
                   <div className="flex flex-shrink-0 items-center relative mr-2">
@@ -191,20 +111,8 @@ export default function financingFormPage() {
                   </div>
                 </div>
               </div>
-              <div className="relative w-5/12">
-                <div className="flex mt-4 justify-end">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    {/* <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span> */}
-                    注册资本
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                  <p className="absolute -inset-y-1/2 translate-y-1/2 right-4">
-                    万元
-                  </p>
-                </div>
-              </div>
+              <VerifyInput label="注册资本" verify={false} unit="万元"></VerifyInput> 
+          
               <div className="flex w-full mt-4">
                 <p className="w-72px mr-2 text-center">
                   单位当前 融资贷款 情况
@@ -238,22 +146,9 @@ export default function financingFormPage() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-between">
-              <div className="relative">
-                <div className="flex mt-4">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span>
-                    经济规模
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                  <p className="absolute right-4 -inset-y-1/2 translate-y-1/2">
-                    万元
-                  </p>
-                </div>
-              </div>
-
+            {/* <div className="flex flex-wrap justify-between"> */}
+         
+              <VerifyInput label="拟融资额度"  unit="万元"></VerifyInput>       
               <div className="flex w-full mt-4">
                 <p className="w-72px mr-2 text-center">拟质押资产 介绍</p>
                 <TextArea placeholder="简述申请需求"></TextArea>
@@ -276,7 +171,7 @@ export default function financingFormPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            {/* </div> */}
             <div className="relative w-5/12">
               <div className="flex mt-4">
                 <div className="flex flex-shrink-0 items-center relative mr-2">
@@ -322,21 +217,25 @@ export default function financingFormPage() {
                 >
                   点击上传
                 </div>
-               
               </div>
-              <span className="text-14" style={{color:"#8A8A8A"}}>说明：上传单个文件大小不超过5M，支持上传格式：png、jpg、jpeg、pdf、docx、xls、xlxs等</span>
+              <span className="text-14" style={{ color: "#8A8A8A" }}>
+                说明：上传单个文件大小不超过5M，支持上传格式：png、jpg、jpeg、pdf、docx、xls、xlxs等
+              </span>
             </div>
           </div>
         </div>
-        <div className="text-16 text-white flex justify-center items-center mx-auto my-8" style={{
-            width: '348px',
-            height: '40px',
-            background: 'linear-gradient(127deg, #5794FD 0%, #3761EA 100%)',
-            boxShadow: '2px 4px 4px 0px rgba(83,142,251,0.4)',
-            borderRadius: '100px 100px 100px 100px',
-            opacity: 1
-        }}>
-        提交
+        <div
+          className="text-16 text-white flex justify-center items-center mx-auto my-8"
+          style={{
+            width: "348px",
+            height: "40px",
+            background: "linear-gradient(127deg, #5794FD 0%, #3761EA 100%)",
+            boxShadow: "2px 4px 4px 0px rgba(83,142,251,0.4)",
+            borderRadius: "100px 100px 100px 100px",
+            opacity: 1,
+          }}
+        >
+          提交
         </div>
       </div>
     </>

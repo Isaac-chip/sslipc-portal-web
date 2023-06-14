@@ -7,7 +7,7 @@ export default function HightValuePage() {
         className="w-full"
         src="/hightValue/Group 443.png"
         alt=""
-        srcset=""
+        srcset="" 
       />
       <div className="container mx-auto py-4">
         <Card
