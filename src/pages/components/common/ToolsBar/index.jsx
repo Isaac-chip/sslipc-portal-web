@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { useState } from "react";
 import classNames from "classnames";
+import mergeDeep from "@/utils/mergeDeep";
 
 
 import { fakeData } from "@/constants";
@@ -10,39 +11,10 @@ export default function ToolsBar({ theme = {}, className,openTabType="_blank" })
   const [Data, setData] = useState(fakeData);
   const defaultThem = {
     toolsBar: {
-      base: " text-white hover:h-96 bg-opacity-10 hover:bg-opacity-50 w-full absolute top-0 z-10  bg-black",
+      base: "text-white hover:h-96 bg-opacity-10 hover:bg-opacity-50 w-full absolute top-0 z-10  bg-black",
     },
   };
 
-  const mergeDeep = (target, source) => {
-    function isObject(item) {
-      return item && typeof item === "object" && !Array.isArray(item);
-    }
-
-    function cloneDeep(obj) {
-      return JSON.parse(JSON.stringify(obj));
-    }
-
-    if (isObject(source) && Object.keys(source).length === 0) {
-      return cloneDeep({ ...target, ...source });
-    }
-
-    const output = { ...target, ...source };
-
-    if (isObject(source) && isObject(target)) {
-      Object.keys(source).forEach((key) => {
-        if (isObject(source[key]) && key in target && isObject(target[key])) {
-          output[key] = mergeDeep(target[key], source[key]);
-        } else {
-          output[key] = isObject(source[key])
-            ? cloneDeep(source[key])
-            : source[key];
-        }
-      });
-    }
-
-    return output;
-  };
   const customTheme = mergeDeep(defaultThem, theme !== undefined ? theme : {});
   useEffect(()=>{
     console.log(openTabType)

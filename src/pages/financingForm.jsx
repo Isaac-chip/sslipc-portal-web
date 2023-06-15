@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import CustomInput from "./components/common/Input";
 import VerifyInput from "./components/common/verifyInput";
+import VerifyCheckbox from "./components/common/verifyCheckbox";
 import { Checkbox, Label } from "flowbite-react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import TextArea from "./components/common/TexTArea";
@@ -37,9 +38,9 @@ export default function financingFormPage() {
               <VerifyInput label="企业名称"></VerifyInput>
               <VerifyInput label="企社会统一信用代码"></VerifyInput>
               <VerifyInput label="企业负责人"></VerifyInput>
-              <VerifyInput label="企业名称"></VerifyInput> 
-              <VerifyInput verify={false} label="负责人职位"></VerifyInput>  
-              <VerifyInput verify={false} label="通讯地址"></VerifyInput>          
+              <VerifyInput label="企业名称"></VerifyInput>
+              <VerifyInput verify={false} label="负责人职位"></VerifyInput>
+              <VerifyInput verify={false} label="通讯地址"></VerifyInput>
             </div>
           </div>
         </div>
@@ -49,50 +50,15 @@ export default function financingFormPage() {
               企业状况
             </p>
             <div className="pl-16px">
-              <div className="relative w-5/12">
-                <div className="flex mt-4">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg  top-2 -left-2">
-                      *
-                    </span>
-                    单位性质
-                  </div>
-                  <div className="w-700px flex justify-between ml-6">
-                    <div className="flex items-center gap-2">
-                      <Checkbox id="remember" />
-                      <Label htmlFor="remember">民营企业</Label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Checkbox id="remember" />
-                      <Label htmlFor="remember">国有企业</Label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Checkbox id="remember" />
-                      <Label htmlFor="remember">外商独资企业</Label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Checkbox id="remember" />
-                      <Label htmlFor="remember">中外合资企业</Label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Checkbox id="remember" />
-                      <Label htmlFor="remember">其他</Label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <VerifyCheckbox verify={true} title="单位性质" data={[{value:"民营企业"},{value:"国有企业"},{value:"外商独资企业"},{value:"中外合资企业"},{value:"其他"}]}></VerifyCheckbox> 
             </div>
             <div className="flex flex-wrap justify-between">
-           
-              <VerifyInput label="经济规模" unit={"万元"}></VerifyInput> 
-        
-              <VerifyInput label="人员规模" verify={false}></VerifyInput> 
+              <VerifyInput label="经济规模" unit={"万元"}></VerifyInput>
+
+              <VerifyInput label="人员规模" verify={false}></VerifyInput>
               <div className="relative w-5/12">
                 <div className="flex mt-4 justify-end">
                   <div className="flex flex-shrink-0 items-center relative mr-2">
-                    {/* <span className="text-red-500 text-lg absolute top-2 -left-2">
-                      *
-                    </span> */}
                     成立时间
                   </div>
                   <div className="relative">
@@ -111,8 +77,12 @@ export default function financingFormPage() {
                   </div>
                 </div>
               </div>
-              <VerifyInput label="注册资本" verify={false} unit="万元"></VerifyInput> 
-          
+              <VerifyInput
+                label="注册资本"
+                verify={false}
+                unit="万元"
+              ></VerifyInput>
+
               <div className="flex w-full mt-4">
                 <p className="w-72px mr-2 text-center">
                   单位当前 融资贷款 情况
@@ -129,71 +99,26 @@ export default function financingFormPage() {
               融资意向
             </p>
             <div className="pl-16px">
-              <div className="relative w-5/12">
-                <div className="flex mt-4">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    <span className="text-red-500 text-lg  top-2 -left-2">
-                      *
-                    </span>
-                    融资方式
-                  </div>
-                  <div className="w-700px flex justify-between ml-6">
-                    <div className="flex items-center gap-2">
-                      <Checkbox id="remember" />
-                      <Label htmlFor="remember">知识产权质押融资</Label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+               <VerifyCheckbox verify={true} title="融资方式" data={[{value:"知识产权质押融资"}]}></VerifyCheckbox> 
             </div>
-            {/* <div className="flex flex-wrap justify-between"> */}
-         
-              <VerifyInput label="拟融资额度"  unit="万元"></VerifyInput>       
-              <div className="flex w-full mt-4">
-                <p className="w-72px mr-2 text-center">拟质押资产 介绍</p>
-                <TextArea placeholder="简述申请需求"></TextArea>
-              </div>
-              <div className="flex w-full mt-4">
-                <div className="flex flex-shrink-0 relative mr-2">
-                  <span className="text-red-500 text-lg ">*</span>
-                  资金用途
-                </div>
-                <TextArea placeholder="简述申请需求"></TextArea>
-              </div>
-              <div className="relative">
-                <div className="flex mt-4">
-                  <div className="flex flex-shrink-0 items-center relative mr-2">
-                    拟最高可接受年费率
-                  </div>
-                  <CustomInput styles={{ width: "380px" }}></CustomInput>
-                  <p className="absolute right-4 -inset-y-1/2 translate-y-1/2">
-                    %
-                  </p>
-                </div>
-              </div>
-            {/* </div> */}
-            <div className="relative w-5/12">
-              <div className="flex mt-4">
-                <div className="flex flex-shrink-0 items-center relative mr-2">
-                  {/* <span className="text-red-500 text-lg  top-2 -left-2">*</span> */}
-                  希望到位时间
-                </div>
-                <div className="w-300px flex justify-between ml-6">
-                  <div className="flex items-center gap-2">
-                    <Checkbox id="remember" />
-                    <Label htmlFor="remember">3个月内</Label>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Checkbox id="remember" />
-                    <Label htmlFor="remember">6个月内</Label>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Checkbox id="remember" />
-                    <Label htmlFor="remember">12个月内</Label>
-                  </div>
-                </div>
-              </div>
+        
+
+            <VerifyInput label="拟融资额度" unit="万元"></VerifyInput>
+            <div className="flex w-full mt-4">
+              <p className="w-72px mr-2 text-center">拟质押资产 介绍</p>
+              <TextArea placeholder="简述申请需求"></TextArea>
             </div>
+            <div className="flex w-full mt-4">
+              <div className="flex flex-shrink-0 relative mr-2">
+                <span className="text-red-500 text-lg ">*</span>
+                资金用途
+              </div>
+              <TextArea placeholder="简述申请需求"></TextArea>
+            </div>
+            <VerifyInput label="拟最高可接受年费率" unit="%"></VerifyInput>
+
+           
+            <VerifyCheckbox title="希望到位时间" data={[{value:"3个月内"},{value:"6个月内"},{value:"12个月内"}]}></VerifyCheckbox>            
             <p
               className="mt-4 text-lg font-bold hover:underline cursor-pointer"
               style={{ color: "#3C76F3" }}
