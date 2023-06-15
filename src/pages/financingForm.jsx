@@ -6,6 +6,7 @@ import VerifyCheckbox from "./components/common/verifyCheckbox";
 import { Checkbox, Label } from "flowbite-react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import TextArea from "./components/common/TexTArea";
+import VerifyTextArea from "./components/common/VerifyTextArea";
 import zhCN from "date-fns/locale/zh-CN";
 import "react-datepicker/dist/react-datepicker.css";
 import classNames from "classnames";
@@ -104,17 +105,9 @@ export default function financingFormPage() {
         
 
             <VerifyInput label="拟融资额度" unit="万元"></VerifyInput>
-            <div className="flex w-full mt-4">
-              <p className="w-72px mr-2 text-center">拟质押资产 介绍</p>
-              <TextArea placeholder="简述申请需求"></TextArea>
-            </div>
-            <div className="flex w-full mt-4">
-              <div className="flex flex-shrink-0 relative mr-2">
-                <span className="text-red-500 text-lg ">*</span>
-                资金用途
-              </div>
-              <TextArea placeholder="简述申请需求"></TextArea>
-            </div>
+         
+            <VerifyTextArea label="拟质押资产 介绍"></VerifyTextArea>
+           <VerifyTextArea verify={true} label="资金用途"></VerifyTextArea>
             <VerifyInput label="拟最高可接受年费率" unit="%"></VerifyInput>
 
            
