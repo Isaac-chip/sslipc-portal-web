@@ -2,20 +2,25 @@ import { useState } from "react";
 import BreadcrumbPlus from "../common/BreadcrumbPlus";
 import SideBar from "../common/SideBar";
 import Table from "../common/Table";
+import { useRouter } from "next/router";
 
 export default function RightsFlow() {
   const [component, setComponent] = useState(null);
+  const router = useRouter()
   const sideBarList = [
     {
       label: "维权流程",
       children: [
         {
           label: "维权援助流程",
-          component: <img className="mx-auto" src="/rightFlow/weiquan@2x.png"></img>,
+          component:<div>
+             <img className="mx-auto" src="/rightFlow/weiquan@2x.png"></img>
+             <img onClick={()=>router.push("/assistanceFlow")} className="mx-auto w-365px h-53px cursor-pointer" src="/rightFlow/weiquanlianxi@2x.png"></img>
+          </div>,
         },
         {
           label: "人民调解流程",
-          component: <img className="mx-auto" src="/rightFlow/zhuanli@2x.png"></img>,
+          component: <img className="mx-auto " src="/rightFlow/zhuanli@2x.png"></img>,
         },
         // { label: "仲裁调解流程" },
         // { label: "专利侵权纠纷提交材料" },
@@ -1109,6 +1114,7 @@ export default function RightsFlow() {
     //   open: false,
     // },
   ];
+ 
   return (
     <div className="container mx-auto">
       <div className="py-3">
