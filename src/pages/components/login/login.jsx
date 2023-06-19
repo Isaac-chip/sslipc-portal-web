@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Input from "../common/Input/Input";
 import LoginDialogWraper from "../common/LoginDialogWraper";
+
+import { useRouter } from "next/router"
 export default function Login() {
+  const router = useRouter()
+  useEffect(()=>{
+    console.log(process.env.NODE_ENV)
+    console.log(process.env.NEXT_PUBLIC_API)
+  },[])
   return (
-    <>
+    <div>
       <LoginDialogWraper title="欢迎登陆">
         <div
           className=" top-4  w-400px mt-4"
@@ -15,10 +22,9 @@ export default function Login() {
             placeholder="请输入账号"
           ></Input>
         </div>
-     
-   
+
         <div
-          className=" top-4  w-400px mt-4"
+          className="top-4  w-400px mt-4"
           style={{ left: "53%", top: "50%" }}
         >
           <Input
@@ -27,7 +33,7 @@ export default function Login() {
             icon="/input/mima.png"
           ></Input>
         </div>
-     
+
         <div
           className="mt-8 w-400px  py-4  rounded-md flex justify-center items-center text-white text-xxl"
           style={{
@@ -39,14 +45,11 @@ export default function Login() {
         >
           登录
         </div>
-        <div
-          className="flex w-full justify-between mt-3"
-       
-        >
-          <p style={{color:"#B9BED1"}}>忘记密码</p>
-          <p className="text-blue">立即注册</p>
+        <div className="flex w-full justify-between mt-3">
+          <p style={{ color: "#B9BED1" }}>忘记密码</p>
+          <p onClick={()=>router.push("/register")} className="text-blue cursor-pointer">立即注册</p>
         </div>
       </LoginDialogWraper>
-    </>
+    </div>
   );
 }
