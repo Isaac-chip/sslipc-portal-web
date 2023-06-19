@@ -2,14 +2,15 @@ import classNames from "classnames";
 import CustomInput from "../Input";
 
 
-export default function VerifyInput({
+
+const VerifyInput=({
   verify = true,
   unit = null,
   label = "",
   verifyType = "default",
   name,
-}) {
-  
+})=> {
+
   return (
     <>
       <div className="relative w-5/12 mb-4">
@@ -30,6 +31,9 @@ export default function VerifyInput({
             {label}
           </div>
           <CustomInput
+            value={(e)=>{
+              console.log(e)
+            }}
             verify={verify}
             name={name}
             styles={{ width: "380px" }}     
@@ -39,4 +43,8 @@ export default function VerifyInput({
       </div>
     </>
   );
+
 }
+
+
+export default VerifyInput;

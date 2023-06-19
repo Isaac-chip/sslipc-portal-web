@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import CustomInput from "./components/common/Input";
 import VerifyInput from "./components/common/verifyInput";
 import VerifyCheckbox from "./components/common/verifyCheckbox";
