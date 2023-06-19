@@ -1,4 +1,4 @@
-import { HiOutlineMail, HiOutlineLockClosed } from "react-icons/hi";
+
 
 export default function Input({ type, placeholder, icon="/input/zhanghao.png" }) {
   return (

@@ -9,7 +9,7 @@ const CustomInput = ({
   styles,
   name,
   verify,
-
+  rules
 }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [detail,setDetail] = useState({})
@@ -18,8 +18,6 @@ const CustomInput = ({
   const handleFocus = () => setIsFocused(true);
   const handleBlur = (e) => {
     setIsFocused(false)
-    console.log("onBlur")
-    console.log(e.target.value)
     let pass = false
     if(e.target.value!=""){
       pass=true
@@ -37,7 +35,7 @@ const CustomInput = ({
     "w-full h-39px px-4 py-2 rounded-md border focus:border-2 border-gray-300 focus:border-blue-500 transition duration-300",
     isFocused  && "outline-none border-blue-500",
     {
-      "border-red-500":!pass && !isFocused
+      "border-red-500":(!pass && !isFocused) && verify
     }
    
   );
@@ -53,11 +51,11 @@ const CustomInput = ({
         onBlur={handleBlur}
         style={styles}
         name={name}
-        
+        verify={verify}
       />
      {
       (verify && !pass && !isFocused) && (
-        <div className="absolute text-red-500">asdfsadf</div>
+        <div className="absolute text-red-500">{rules?.required || "请填写信息"}</div>
       )
      }
     </div>

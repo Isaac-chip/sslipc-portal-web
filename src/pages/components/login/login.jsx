@@ -5,10 +5,6 @@ import LoginDialogWraper from "../common/LoginDialogWraper";
 import { useRouter } from "next/router"
 export default function Login() {
   const router = useRouter()
-  useEffect(()=>{
-    console.log(process.env.NODE_ENV)
-    console.log(process.env.NEXT_PUBLIC_API)
-  },[])
   return (
     <div>
       <LoginDialogWraper title="欢迎登陆">
@@ -20,6 +16,7 @@ export default function Login() {
             icon="/input/zhanghao.png"
             type={"text"}
             placeholder="请输入账号"
+            rules={{ required: "请填写企业名称" }}
           ></Input>
         </div>
 

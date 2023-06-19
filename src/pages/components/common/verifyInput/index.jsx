@@ -7,13 +7,13 @@ const VerifyInput=({
   verify = true,
   unit = null,
   label = "",
-  verifyType = "default",
   name,
+  rules
 })=> {
 
   return (
     <>
-      <div className="relative w-5/12 mb-4">
+      <div className="relative w-5/12 mb-6">
         <div className="flex mt-4 justify-end">
           <div
             className={classNames(
@@ -23,7 +23,7 @@ const VerifyInput=({
             <span
               className={classNames(
                 "text-red-500 text-lg absolute top-2 -left-2",
-                { hidden: !verify && verifyType == "login" }
+                { hidden: !verify }
               )}
             >
               *
@@ -37,6 +37,7 @@ const VerifyInput=({
             verify={verify}
             name={name}
             styles={{ width: "380px" }}     
+            rules={rules}
           />
           {unit && <p className="absolute  translate-y-1/2 right-4">{unit}</p>}
         </div>

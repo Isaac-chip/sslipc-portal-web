@@ -9,7 +9,7 @@ import VerifyTextArea from "./components/common/VerifyTextArea";
 import zhCN from "date-fns/locale/zh-CN";
 import "react-datepicker/dist/react-datepicker.css";
 import classNames from "classnames";
-// import CustomInput from "./components/common/Input";
+
 
 registerLocale("zh-CN", zhCN);
 export default function financingFormPage() {
@@ -35,14 +35,16 @@ export default function financingFormPage() {
               基础信息
             </p>
             <div className="flex flex-wrap justify-between">
-              <VerifyInput name="companyName" label="企业名称"></VerifyInput>
-           
-              
-              {/* <VerifyInput label="企社会统一信用代码"></VerifyInput>
-                <VerifyInput label="企业负责人"></VerifyInput>
-                <VerifyInput label="企业名称"></VerifyInput>
-                <VerifyInput verify={false} label="负责人职位"></VerifyInput>
-                <VerifyInput verify={false} label="通讯地址"></VerifyInput> */}
+              <VerifyInput
+                name="companyName"
+                label="企业名称"
+                rules={{ required: "请填写企业名称" }}
+              ></VerifyInput>
+              <VerifyInput label="企社会统一信用代码"></VerifyInput>
+              <VerifyInput label="企业负责人"></VerifyInput>
+              <VerifyInput label="企业名称"></VerifyInput>
+              <VerifyInput verify={false} label="负责人职位"></VerifyInput>
+              <VerifyInput verify={false} label="通讯地址"></VerifyInput>
             </div>
           </div>
         </div>
@@ -65,9 +67,8 @@ export default function financingFormPage() {
               ></VerifyCheckbox>
             </div>
             <div className="flex flex-wrap justify-between">
-              {/* <VerifyInput label="经济规模" unit={"万元"}></VerifyInput>
-
-                <VerifyInput label="人员规模" verify={false}></VerifyInput> */}
+              <VerifyInput label="经济规模" unit={"万元"}></VerifyInput>
+              <VerifyInput label="人员规模" verify={false}></VerifyInput>
               <div className="relative w-5/12">
                 <div className="flex mt-4 justify-end">
                   <div className="flex flex-shrink-0 items-center relative mr-2">
@@ -89,11 +90,11 @@ export default function financingFormPage() {
                   </div>
                 </div>
               </div>
-              {/* <VerifyInput
-                  label="注册资本"
-                  verify={false}
-                  unit="万元"
-                ></VerifyInput> */}
+              <VerifyInput
+                label="注册资本"
+                verify={false}
+                unit="万元"
+              ></VerifyInput>
 
               <div className="flex w-full mt-4">
                 <p className="w-72px mr-2 text-center">
@@ -118,11 +119,11 @@ export default function financingFormPage() {
               ></VerifyCheckbox>
             </div>
 
-            {/* <VerifyInput label="拟融资额度" unit="万元"></VerifyInput>
+            <VerifyInput label="拟融资额度" unit="万元"></VerifyInput>
 
-              <VerifyTextArea label="拟质押资产 介绍"></VerifyTextArea>
-              <VerifyTextArea verify={true} label="资金用途"></VerifyTextArea>
-              <VerifyInput label="拟最高可接受年费率" unit="%"></VerifyInput> */}
+            <VerifyTextArea label="拟质押资产 介绍"></VerifyTextArea>
+            <VerifyTextArea verify={true} label="资金用途"></VerifyTextArea>
+            <VerifyInput label="拟最高可接受年费率" unit="%"></VerifyInput>
 
             <VerifyCheckbox
               title="希望到位时间"
