@@ -3,9 +3,12 @@ import { Modal } from "flowbite-react";
 
 import Login from "./components/login/login";
 
+
+
 export default function LoginPage() {
   const [showModal, setShowModal] = useState(false);
   const [modalRender,setModalRender] = useState(false)
+
   useEffect(()=>{
     setModalRender(true)
   },[])

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import CustomInput from "../Input";
-
-
+import {useSelector, useDispatch } from "react-redux";
+import { increment } from "@/store/actions/creators";
 
 const VerifyInput=({
   verify = true,
@@ -10,6 +10,8 @@ const VerifyInput=({
   name,
   rules
 })=> {
+  const dispatch = useDispatch()
+  const counter = useSelector(state => state._Form);
 
   return (
     <>
@@ -33,6 +35,9 @@ const VerifyInput=({
           <CustomInput
             value={(e)=>{
               console.log(e)
+              dispatch(increment(e))
+         
+          
             }}
             verify={verify}
             name={name}

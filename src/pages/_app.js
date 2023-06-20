@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { Provider } from "react-redux";
+import store from "@/store";
 
 import "@/styles/globals.css";
 import "@/styles/tools.scss";
@@ -39,43 +41,44 @@ export default function App({ Component, pageProps }) {
   };
 
   return (
-  
-      <div
-        className={classNames(
-          "flex flex-col justify-between  min-h-screen overflow-x-hidden"
-        )}
-        style={{
-          background: pageBgColorList[router.pathname]
-            ? pageBgColorList[router.pathname]
-            : "#F9F9F9",
-        }}
-      >
-        <div className={classNames({ hidden: !isShowRootComponent })}>
-          <Header></Header>
-        </div>
-        {isShowRootComponent && router.pathname != "/" && (
-          <div
-            className="relative"
-            style={{ background: "#F0F3F7", minHeight: "70px" }}
-          >
-            <ToolsBar
-              openTabType={openTabType}
-              theme={{
-                toolsBar: {
-                  base: "w-full hover:bg-gray-200 hover:h-96  absolute z-50",
-                },
-              }}
-            ></ToolsBar>
-          </div>
-        )}
-
-        <div className="flex-grow">
-          <Component {...pageProps} />
-        </div>
-
-        <div className={classNames({ hidden: !isShowRootComponent })}>
-          <Footer></Footer>
-        </div>
+    <div
+      className={classNames(
+        "flex flex-col justify-between  min-h-screen overflow-x-hidden"
+      )}
+      style={{
+        background: pageBgColorList[router.pathname]
+          ? pageBgColorList[router.pathname]
+          : "#F9F9F9",
+      }}
+    >
+      <div className={classNames({ hidden: !isShowRootComponent })}>
+        <Header></Header>
       </div>
+      {isShowRootComponent && router.pathname != "/" && (
+        <div
+          className="relative"
+          style={{ background: "#F0F3F7", minHeight: "70px" }}
+        >
+          <ToolsBar
+            openTabType={openTabType}
+            theme={{
+              toolsBar: {
+                base: "w-full hover:bg-gray-200 hover:h-96  absolute z-50",
+              },
+            }}
+          ></ToolsBar>
+        </div>
+      )}
+
+      <div className="flex-grow">
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </div>
+
+      <div className={classNames({ hidden: !isShowRootComponent })}>
+        <Footer></Footer>
+      </div>
+    </div>
   );
 }
