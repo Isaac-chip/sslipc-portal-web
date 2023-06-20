@@ -11,7 +11,7 @@ const VerifyInput=({
   rules
 })=> {
   const dispatch = useDispatch()
-  const counter = useSelector(state => state._Form);
+
 
   return (
     <>
