@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Input from "./components/common/Input/Input";
 import LoginDialogWraper from "./components/common/LoginDialogWraper";
 import { Alert } from "flowbite-react";
-// import VerifySlideFixed from "./components/verifySlideFixed";
+import VerifySlideFixed from "./components/verifySlideFixed";
 import { register } from "@/api";
 export default function RegisterPage() {
   const [imgSize, setImgSize] = useState({ width: "330px", height: "200px" });
@@ -21,11 +21,11 @@ export default function RegisterPage() {
     setIsSlideShow(true);
   };
   useEffect(()=>{
-    register()
+    // register()
   },[])
   return (
     <div className="relative">
-          {/* <div className="sliderPopup">
+          <div className="sliderPopup">
             <h3>滑动弹出式（slider-popup）</h3>
             <button className="btn" onClick={(e)=>handleSlideClick(e)}>点击我</button>
             {
@@ -33,7 +33,7 @@ export default function RegisterPage() {
             (<VerifySlideFixed isSlideShow={isSlideShow}/>)
             : ''
             }
-          </div> */}
+          </div>
       <div className="absolute top-2 left-1/2 transform -translate-x-1/2 ">
         <Alert color="failure" onDismiss={() => alert("Alert dismissed!")}>
           <span>
