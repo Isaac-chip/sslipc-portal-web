@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import CustomInput from "../common/Input";
+import Input from "../common/Input/Input";
 import LoginDialogWraper from "../common/LoginDialogWraper";
 
 import { useRouter } from "next/router"
@@ -9,32 +9,30 @@ export default function Login() {
     <div>
       <LoginDialogWraper title="欢迎登陆">
         <div
-          className=" top-4  w-400px mt-4 mb-4"
+          className=" top-4  w-400px mt-4"
           style={{ left: "53%", top: "26%" }}
         >
-          {/* <Input
+          <Input
             icon="/input/zhanghao.png"
             type={"text"}
             placeholder="请输入账号"
             rules={{ required: "请填写企业名称" }}
-          ></Input> */}
-          <CustomInput placeholder={"请输入账号"} icon="/input/zhanghao.png" name={"account"} verify rules={{ required: "请填写账号" }}></CustomInput>
+          ></Input>
         </div>
 
         <div
           className="top-4  w-400px mt-4"
           style={{ left: "53%", top: "50%" }}
         >
-          {/* <Input
+          <Input
             type={"password"}
             placeholder="请输入密码"
             icon="/input/mima.png"
-          ></Input> */}
-           <CustomInput type={"password"} placeholder={"请输入密码"} icon="/input/mima.png" name={"password"} verify rules={{ required: "请填写密码" }}></CustomInput>
+          ></Input>
         </div>
 
         <div
-          className="mt-8 w-400px  py-4  rounded-md flex justify-center items-center text-white text-xxl"
+          className="cursor-pointer mt-8 w-400px  py-4  rounded-md flex justify-center items-center text-white text-xxl"
           style={{
             left: "53%",
             top: "66%",

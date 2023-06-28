@@ -60,11 +60,12 @@ const CustomInput = ({
           style={styles}
           name={name}
           verify={verify}
+          type={type}
         />
       </div>
 
       {verify && !pass && !isFocused && (
-        <div className="absolute text-red-500">
+        <div className="absolute text-red-500 text-14">
           {rules?.required || "请填写信息"}
         </div>
       )}
