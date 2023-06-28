@@ -5,6 +5,7 @@ import store from "@/store";
 
 import "@/styles/globals.css";
 import "@/styles/tools.scss";
+import "../../public/assets/index.css"
 import classNames from "classnames";
 import Header from "./components/common/Header/index";
 import Footer from "./components/common/Footer";

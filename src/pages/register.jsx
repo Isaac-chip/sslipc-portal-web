@@ -1,8 +1,46 @@
+import { useEffect, useState } from "react";
 import Input from "./components/common/Input/Input";
 import LoginDialogWraper from "./components/common/LoginDialogWraper";
+import { Alert } from "flowbite-react";
+// import VerifySlideFixed from "./components/verifySlideFixed";
+import { register } from "@/api";
 export default function RegisterPage() {
+  const [imgSize, setImgSize] = useState({ width: "330px", height: "200px" });
+  const [setSize, setSetSize] = useState({
+    imgHeight: 200,
+    imgWidth: 330,
+    barHeight: 40,
+    barWidth: 310,
+  });
+  const [barSize, setBarSize] = useState({ width: "310px", height: "40px" });
+  const [vSpace, setVSpace] = useState(5);
+  const [isPointShow, setIsPointShow] = useState(false);
+  const [isSlideShow, setIsSlideShow] = useState(false);
+
+  const handleSlideClick = () => {
+    setIsSlideShow(true);
+  };
+  useEffect(()=>{
+    register()
+  },[])
   return (
-    <div>
+    <div className="relative">
+          {/* <div className="sliderPopup">
+            <h3>滑动弹出式（slider-popup）</h3>
+            <button className="btn" onClick={(e)=>handleSlideClick(e)}>点击我</button>
+            {
+            isSlideShow ?
+            (<VerifySlideFixed isSlideShow={isSlideShow}/>)
+            : ''
+            }
+          </div> */}
+      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 ">
+        <Alert color="failure" onDismiss={() => alert("Alert dismissed!")}>
+          <span>
+            <p>Change a few things up and try submitting again.</p>
+          </span>
+        </Alert>
+      </div>
       <LoginDialogWraper>
         <div
           className=" top-4  w-400px mt-4"
@@ -63,7 +101,7 @@ export default function RegisterPage() {
           ></Input>
         </div>
         <div
-          className="mt-8 w-400px  py-4  rounded-md flex justify-center items-center text-white text-xxl"
+          className="cursor-pointer mt-8 w-400px  py-4  rounded-md flex justify-center items-center text-white text-xxl"
           style={{
             left: "53%",
             top: "66%",
@@ -89,7 +127,6 @@ export default function RegisterPage() {
           </p>
         </div>
       </LoginDialogWraper>
-    
     </div>
   );
 }
