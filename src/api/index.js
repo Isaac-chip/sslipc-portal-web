@@ -18,7 +18,7 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 // 用户app-验证码接口不行 换成管理后台的
 export async function getPicture(params) {
     console.log(apiUrl)
-    console.log(publicRuntimeConfig)
+    console.log(publicRuntimeConfig.NEXT_PUBLIC_API)
     console.log(process.env.NODE_ENV)
     return request('admin-api/system/captcha/get',{
       method: 'POST',

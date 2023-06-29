@@ -1,5 +1,8 @@
 import axios from 'axios';
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
+axios.defaults.baseURL = publicRuntimeConfig.NEXT_PUBLIC_API;
 // axios.defaults.baseURL = '192.168.0.123:48080';
 
 const service = axios.create({

@@ -2,35 +2,24 @@ import { useEffect, useState } from "react";
 import Input from "./components/common/Input/Input";
 import LoginDialogWraper from "./components/common/LoginDialogWraper";
 import { Alert } from "flowbite-react";
-import VerifySlideFixed from "./components/verifySlideFixed";
-import { register } from "@/api";
+import VerifyPointFixed from "./components/verifyPointFixed";
 export default function RegisterPage() {
-  const [imgSize, setImgSize] = useState({ width: "330px", height: "200px" });
-  const [setSize, setSetSize] = useState({
-    imgHeight: 200,
-    imgWidth: 330,
-    barHeight: 40,
-    barWidth: 310,
-  });
-  const [barSize, setBarSize] = useState({ width: "310px", height: "40px" });
-  const [vSpace, setVSpace] = useState(5);
-  const [isPointShow, setIsPointShow] = useState(false);
-  const [isSlideShow, setIsSlideShow] = useState(false);
 
-  const handleSlideClick = () => {
-    setIsSlideShow(true);
+ 
+  const [isPointShow, setIsPointShow] = useState(false);
+
+
+  const submit = () => {
+    setIsPointShow(true);
   };
-  useEffect(()=>{
-    // register()
-  },[])
+
   return (
     <div className="relative">
-          <div className="sliderPopup">
-            <h3>滑动弹出式（slider-popup）</h3>
-            <button className="btn" onClick={(e)=>handleSlideClick(e)}>点击我</button>
+          <div className="pointPopup">
+           
             {
-            isSlideShow ?
-            (<VerifySlideFixed isSlideShow={isSlideShow}/>)
+            isPointShow ?
+            (<VerifyPointFixed isPointShow={isPointShow} closeFn={(e)=>setIsPointShow(e)} />)
             : ''
             }
           </div>
@@ -101,6 +90,7 @@ export default function RegisterPage() {
           ></Input>
         </div>
         <div
+          onClick={submit}
           className="cursor-pointer mt-8 w-400px  py-4  rounded-md flex justify-center items-center text-white text-xxl"
           style={{
             left: "53%",
