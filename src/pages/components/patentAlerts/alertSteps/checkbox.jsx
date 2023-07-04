@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Checkbox({data}) {
+export default function Checkbox({data,children}) {
   const [activity,setActivity] = useState(false)
   return (
     <>
@@ -13,7 +13,7 @@ export default function Checkbox({data}) {
           alt=""
           srcset=""
         />
-        <div className="ml-1 mr-2">{data?.label}</div>
+        <div className="ml-1 mr-2">{data?.label}{children}</div>
       </div>
     </>
   );
