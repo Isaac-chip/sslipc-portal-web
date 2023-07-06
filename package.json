@@ -22,7 +22,6 @@
     "crypto-js": "^4.1.1",
     "flowbite": "^1.6.4",
     "flowbite-react": "^0.4.2",
-    "imagemin-mozjpeg": "9.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "9.0.0",
     "less": "^2.7.3",
